@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200 ng-scope" id="" mobile-header="">
+    <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
       <div className="page-header-02__inner section__content">
         <div className="page-header-02__content page-header-02__content_mobile-vertical-align_top">
           <div className="page-header-02__left">
@@ -34,7 +34,7 @@ const Header = () => {
                   <span className="button__text">Написать в WhatsApp</span>
                 </div>
               </a>
-              <button className="page-header-02-mobile-contacts-btn" ng-click="mobileHeader.showMobileContacts()">
+              <button className="page-header-02-mobile-contacts-btn">
                 <svg>
                   <use xlinkHref="/assets/sites/template1/icons.svg#icon-phone"></use>
                 </svg>
@@ -64,7 +64,7 @@ const Header = () => {
               </div>
             </a>
           </div>
-          <button className="header-mobile-contacts__close-btn" ng-click="mobileHeader.hideMobileContacts()">
+          <button className="header-mobile-contacts__close-btn">
             <svg>
               <use xlinkHref="/assets/sites/template1/icons.svg#icon-cross"></use>
             </svg>
