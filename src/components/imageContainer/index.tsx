@@ -9,10 +9,10 @@ const ImageContainer = ({ background, pathImg, mainClass, children }: IProps) =>
   return (
     <div className={mainClass}>
       <div className="section__background-image-container">
-        <div className="section__background-image" style={{ backgroundImage: `url(${pathImg})` }} lazy-background></div>
+        <div className="section__background-image" style={{ backgroundImage: `url(${pathImg})` }}></div>
       </div>
       {background ? <div className="section__background-mask" /> : null}
-      {children || null}
+      <>{children}</>
     </div>
   );
 };
