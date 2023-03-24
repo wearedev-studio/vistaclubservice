@@ -7,7 +7,6 @@ const Footer = () => {
           style={{
             backgroundImage: "url(./images/005/143/700/5143700/1920xnoinc/dostavka-avtomobilej-iz-yaponii.jpg)",
           }}
-          lazy-background=""
         />
       </div>
       <div className="section__background-mask" />

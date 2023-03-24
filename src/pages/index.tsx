@@ -20,11 +20,9 @@ const Home: NextPage = () => {
       <Welcome />
       <Cars />
       <Reason />
-      <ImageContainer
-        background
-        mainClass="cover-17 page_section_20 section section_container-width_1200"
-        pathImg="./images/005/143/442/5143442/1920xnoinc/rastamozhka-yaponskih-avto-.jpg"
-      />
+      {/* TODO: Не нужно усложнять. Просто создаем компонент под нужный блок. Трансформируем html в react через конвертор и импортируем сюда компонент. Без лишних пропсов. делаем по аналогии как футер и лр. блоки. */}
+      <ImageContainer background mainClass="cover-17 page_section_20 section section_container-width_1200" pathImg="./images/005/143/442/5143442/1920xnoinc/rastamozhka-yaponskih-avto-.jpg" />
+      {/* FIXME: Не билдится приложение. Устранить */}
       <ImageContainer
         mainClass="page_section_22 promo-05 section section_container-width_1200"
         pathImg="./images/006/040/093/6040093/1920xnoinc/kupit-avtomobil-iz-yaponii.jpg"
