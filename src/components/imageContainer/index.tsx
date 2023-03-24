@@ -7,11 +7,11 @@ interface IProps {
 
 const ImageContainer = ({ background, pathImg, mainClass, children }: IProps) => {
     return (
-        <div class={ mainClass } id="">
-            <div class="section__background-image-container">
-              <div class="section__background-image" style={{ backgroundImage: `url(${pathImg})` }} lazy-background></div>
+        <div className={ mainClass } id="">
+            <div className="section__background-image-container">
+              <div className="section__background-image" style={{ backgroundImage: `url(${pathImg})` }} lazy-background=''></div>
             </div>
-            {background ? <div class="section__background-mask" /> : null}
+            {background ? <div className="section__background-mask" /> : null}
             {children || null}
         </div>
     )
