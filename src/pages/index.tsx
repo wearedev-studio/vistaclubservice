@@ -23,11 +23,9 @@ const Home: NextPage = () => {
       <Cars />
       <Reason />
       <ImageContainer background mainClass="cover-17 page_section_20 section section_container-width_1200" pathImg="./images/005/143/442/5143442/1920xnoinc/rastamozhka-yaponskih-avto-.jpg" />
-      <ImageContainer
-        mainClass="page_section_22 promo-05 section section_container-width_1200"
-        pathImg="./images/006/040/093/6040093/1920xnoinc/kupit-avtomobil-iz-yaponii.jpg"
-        children={<Guarantees />}
-      />
+      <ImageContainer mainClass="page_section_22 promo-05 section section_container-width_1200" pathImg="./images/006/040/093/6040093/1920xnoinc/kupit-avtomobil-iz-yaponii.jpg">
+        <Guarantees />
+      </ImageContainer>
       <Purchase />
       {/* <ImageContainer
         background
