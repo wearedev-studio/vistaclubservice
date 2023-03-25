@@ -7,6 +7,8 @@ import { Footer } from "@/components/footer";
 import { Reason } from "@/components/reason";
 import { ImageContainer } from "@/components/imageContainer";
 import { Guarantees } from "@/components/guarantees";
+import { Purchase } from "@/components/purchase";
+import { Workflow } from "@/components/workflow";
 
 const Home: NextPage = () => {
   return (
@@ -24,7 +26,15 @@ const Home: NextPage = () => {
       <ImageContainer
         mainClass="page_section_22 promo-05 section section_container-width_1200"
         pathImg="./images/006/040/093/6040093/1920xnoinc/kupit-avtomobil-iz-yaponii.jpg"
-        ><Guarantees /></ImageContainer>
+        children={<Guarantees />}
+      />
+      <Purchase />
+      {/* <ImageContainer
+        background
+        mainClass="cover-17 page_section_53 section section_container-width_1200"
+        pathImg="./images/005/143/611/5143611/1920xnoinc/kak-kupit-avto-s-aukciona.jpg"
+      /> */}
+      {/* <Workflow /> */}
       <Footer />
     </>
   );
