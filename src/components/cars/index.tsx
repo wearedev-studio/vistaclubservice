@@ -1,4 +1,6 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {Pagination} from "swiper";
+
 interface CarProps {
   name: string;
   img: string;
@@ -41,79 +43,60 @@ const Cars = () => {
         <div className="section__subheader wysiwyg-string">Мы бесплатно&nbsp;поможем подобрать авто под ваш бюджет и характеристики!</div>
         <div className="cards-05-carousel">
           <div className="cards-05-carousel__list-container">
-            <Splide
-              className="cards-05-carousel__list cards-05-list flexible-list flexible-list_columns_4 flexible-list_mobile-columns_1 page_section_15__list"
-              options={{ rewind: true }}
-              aria-label="React Splide Example"
-            >
-              <SplideSlide className="cards-05-item cards-05-list__item flexible-list__item">
-                <a
-                  className="cards-05-item__inner"
-                  href="#poshlina"
-                  style={{
-                    backgroundImage: "url(./images/006/040/885/6040885/600x950crop/getauto_1.jpg)",
-                  }}
-                >
-                  <div className="cards-05-item__content">
-                    <div className="cards-05-item__title">
-                      <h3>Авто под полную пошлину</h3>
-                    </div>
-                    <div className="cards-05-item__sub wysiwyg-string">
-                      <u>от 500 000 руб.</u>
-                    </div>
-                  </div>
-                </a>
-              </SplideSlide>
-              <SplideSlide className="cards-05-item cards-05-list__item flexible-list__item">
-                <a
-                  className="cards-05-item__inner"
-                  href="#poshlina"
-                  style={{
-                    backgroundImage: "url(./images/006/040/885/6040885/600x950crop/getauto_1.jpg)",
-                  }}
-                >
-                  <div className="cards-05-item__content">
-                    <div className="cards-05-item__title">
-                      <h3>Авто под полную пошлину</h3>
-                    </div>
-                    <div className="cards-05-item__sub wysiwyg-string">
-                      <u>от 500 000 руб.</u>
-                    </div>
-                  </div>
-                </a>
-              </SplideSlide>
-              <SplideSlide className="cards-05-item cards-05-list__item flexible-list__item">
-                <a
-                  className="cards-05-item__inner"
-                  href="#poshlina"
-                  style={{
-                    backgroundImage: "url(./images/006/040/885/6040885/600x950crop/getauto_1.jpg)",
-                  }}
-                >
-                  <div className="cards-05-item__content">
-                    <div className="cards-05-item__title">
-                      <h3>Авто под полную пошлину</h3>
-                    </div>
-                    <div className="cards-05-item__sub wysiwyg-string">
-                      <u>от 500 000 руб.</u>
-                    </div>
-                  </div>
-                </a>
-              </SplideSlide>
-            </Splide>
-
-            <button className="cards-05-carousel__nav-btn cards-05-carousel__nav-btn_prev page_section_15__prev-btn" type="button">
-              <svg>
-                <use xlinkHref="/assets/sites/template1/icons.svg#icon-left-half-arrow" />
-              </svg>
-            </button>
-            <button className="cards-05-carousel__nav-btn cards-05-carousel__nav-btn_next page_section_15__next-btn" type="button">
-              <svg>
-                <use xlinkHref="/assets/sites/template1/icons.svg#icon-right-half-arrow" />
-              </svg>
-            </button>
+            <div className="cards-05-carousel__list cards-05-list flexible-list_mobile-columns_1 page_section_15__list">
+              <Swiper
+              modules={[Pagination]}
+                speed={1000}
+                loop={false}
+                autoplay={{
+                  delay: 7000,
+                }}
+                slidesPerView={1.3}
+                spaceBetween={10}
+                pagination={{
+                  el: '.page_section_15_swiper_pagination',
+                  type: 'bullets',
+                  clickable: true
+                }}
+                breakpoints={{
+                  576: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                  },
+                }}
+              >
+                {data.map((item) => {
+                  return (
+                    <SwiperSlide key={item.name}>
+                      <div style={{ padding: 0 }} className="cards-05-item cards-05-list__item flexible-list__item">
+                        <a
+                          className="cards-05-item__inner"
+                          href="#poshlina"
+                          style={{
+                            backgroundImage: `url(${item.img})`,
+                          }}
+                        >
+                          <div className="cards-05-item__content">
+                            <div className="cards-05-item__title">
+                              <h3>{item.name}</h3>
+                            </div>
+                            <div className="cards-05-item__sub wysiwyg-string">
+                              <u>{item.price}</u>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
           </div>
-          <div className="cards-05-carousel__pagination cards-05-pagination page_section_15__pagination" />
+          <div className="page_section_15_swiper_pagination" />
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ const Page: NextPage = () => {
         mainClass="cover-17 page_section_53 section section_container-width_1200"
         pathImg="./images/005/143/611/5143611/1920xnoinc/kak-kupit-avto-s-aukciona.jpg"
       /> */}
-      {/* <Workflow /> */}
+      <Workflow />
       <Footer />
     </>
   );
