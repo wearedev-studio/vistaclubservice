@@ -10,7 +10,7 @@ import { Guarantees } from "@/components/guarantees";
 import { Purchase } from "@/components/purchase";
 import { Workflow } from "@/components/workflow";
 
-const Home: NextPage = () => {
+const Page: NextPage = () => {
   return (
     <>
       <Head>
@@ -38,4 +38,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Page;
