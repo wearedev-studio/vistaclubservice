@@ -8,15 +8,16 @@ import { Reason } from "@/components/reason";
 import { Guarantees } from "@/components/guarantees";
 import { Purchase } from "@/components/purchase";
 import { Workflow } from "@/components/workflow";
-import {ClientFeedback } from "@/components/clientFeedback";
+import { ClientFeedback } from "@/components/clientFeedback";
 import { Button } from "@/components/button";
 import { Reviews } from "@/components/reviews";
 import { Blog } from "@/components/blog";
-import { ButtonBlog } from "@/components/buttonBlog"
+import { ButtonBlog } from "@/components/buttonBlog";
 import { Contacts } from "@/components/contacts";
 import { CustomsBroker } from "@/components/customsBroker";
 import { Picture } from "@/components/picture";
-// import { CarEvaluation } from "@/components/carEvaluation";
+import { Menu } from "@/components/menu";
+import { CarEvaluation } from "@/components/carEvaluation";
 
 const Page: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Page: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <Menu />
       <Welcome />
       <Cars />
       <Reason />
@@ -36,11 +38,11 @@ const Page: NextPage = () => {
       <Workflow />
       <ClientFeedback />
       <Button />
-      <Reviews />  
-      <Blog /> 
+      <Reviews />
+      <Blog />
       <ButtonBlog />
       <Contacts />
-      {/* <CarEvaluation /> */}
+      <CarEvaluation />
       <Footer />
     </>
   );

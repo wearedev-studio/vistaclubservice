@@ -14866,12 +14866,6 @@ img.mfp-img {
 .page_section_6 .wysiwyg-string a {
   border-bottom-width: 1px;
 }
-@media (max-width: 979px) {
-  .page_section_7,
-  .page_section_7 ~ * {
-    display: none !important;
-  }
-}
 .page_section_7 .section__content {
   padding-top: 10px;
 }
@@ -20051,12 +20045,6 @@ body:not(.device-mobile) .page_section_62 .section__background-image {
 .page_section_72 .wysiwyg-content a,
 .page_section_72 .wysiwyg-string a {
   border-bottom-width: 1px;
-}
-@media (max-width: 979px) {
-  .page_section_73,
-  .page_section_73 ~ * {
-    display: none !important;
-  }
 }
 .page_section_73 .section__content {
   padding-top: 35px;
