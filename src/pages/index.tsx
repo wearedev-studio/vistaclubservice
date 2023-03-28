@@ -5,10 +5,18 @@ import Head from "next/head";
 import { Cars } from "@/components/cars";
 import { Footer } from "@/components/footer";
 import { Reason } from "@/components/reason";
-import { ImageContainer } from "@/components/imageContainer";
 import { Guarantees } from "@/components/guarantees";
 import { Purchase } from "@/components/purchase";
 import { Workflow } from "@/components/workflow";
+import {ClientFeedback } from "@/components/clientFeedback";
+import { Button } from "@/components/button";
+import { Reviews } from "@/components/reviews";
+import { Blog } from "@/components/blog";
+import { ButtonBlog } from "@/components/buttonBlog"
+import { Contacts } from "@/components/contacts";
+import { CustomsBroker } from "@/components/customsBroker";
+import { Picture } from "@/components/picture";
+// import { CarEvaluation } from "@/components/carEvaluation";
 
 const Page: NextPage = () => {
   return (
@@ -22,17 +30,17 @@ const Page: NextPage = () => {
       <Welcome />
       <Cars />
       <Reason />
-      <ImageContainer background mainClass="cover-17 page_section_20 section section_container-width_1200" pathImg="./images/005/143/442/5143442/1920xnoinc/rastamozhka-yaponskih-avto-.jpg" />
-      <ImageContainer mainClass="page_section_22 promo-05 section section_container-width_1200" pathImg="./images/006/040/093/6040093/1920xnoinc/kupit-avtomobil-iz-yaponii.jpg">
-        <Guarantees />
-      </ImageContainer>
+      <Picture />
+      <CustomsBroker />
       <Purchase />
-      {/* <ImageContainer
-        background
-        mainClass="cover-17 page_section_53 section section_container-width_1200"
-        pathImg="./images/005/143/611/5143611/1920xnoinc/kak-kupit-avto-s-aukciona.jpg"
-      /> */}
       <Workflow />
+      <ClientFeedback />
+      <Button />
+      <Reviews />  
+      <Blog /> 
+      <ButtonBlog />
+      <Contacts />
+      {/* <CarEvaluation /> */}
       <Footer />
     </>
   );
