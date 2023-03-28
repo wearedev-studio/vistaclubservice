@@ -7,7 +7,7 @@ const Guarantees = () => {
             Таможенный брокер
             <br />
             с опытом работы 15 лет
-            <br />в штате GET AUTO!
+            <br />в штате НАЗВАНИЕ САЙТА
           </div>
         </div>
         <div className="promo-05-content__text wysiwyg-string">

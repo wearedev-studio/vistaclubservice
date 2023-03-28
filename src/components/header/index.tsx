@@ -6,7 +6,8 @@ const Header = () => {
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
               <a className="page-header-02__brand-logo" href="">
-                <img style={{ width: 125 }} alt="Grad" src="./images/006/049/455/6049455/250x/GetAuto_logo_general.svg" />
+                ЛОГОТИП
+                {/* <img style={{ width: 125 }} alt="Grad" src="./images/006/049/455/6049455/250x/GetAuto_logo_general.svg" /> */}
               </a>
             </div>
             <div className="page-header-02__subheader wysiwyg-string">
@@ -14,22 +15,22 @@ const Header = () => {
               <br />
               <strong>из Японии, Кореи, Китая, ОАЭ</strong>
               <br />
-              ООО «Гет Авто» © 2016
+              ООО «НАЗВАНИЕ» © 2016
             </div>
           </div>
           <div className="page-header-02__right">
             <div className="page-header-02__contacts">
               <div className="page-header-02__phonesub wysiwyg-string">
-                <strong>г. Находка, ул. Минская 6</strong>
+                <strong>Адрес</strong>
                 <br />
                 Звонок по РФ бесплатный
               </div>
               <div className="page-header-02__phone">
-                <a className="bzm-calltracking" href="tel:8 (800) 250-83-23">
-                  8 (800) 250-83-23
+                <a className="bzm-calltracking" href="tel:8 999 999 99 99">
+                  8 999 999 99 99
                 </a>
               </div>
-              <a className="page-header-02__button button" href="https://wa.me/79143333003" target="_blank">
+              <a className="page-header-02__button button" href="https://wa.me/111" target="_blank">
                 <div className="button__inner">
                   <span className="button__text">Написать в WhatsApp</span>
                 </div>
@@ -47,18 +48,18 @@ const Header = () => {
         <div className="header-mobile-contacts">
           <div className="header-mobile-contacts__phone">
             <div className="header-mobile-contacts__phone-info">
-              <strong>г. Находка, ул. Минская 6</strong>
+              <strong>Адрес</strong>
               <br />
               Звонок по РФ бесплатный
             </div>
             <div className="header-mobile-contacts__phone-num">
-              <a className="bzm-calltracking" href="tel:8 (800) 250-83-23">
-                8 (800) 250-83-23
+              <a className="bzm-calltracking" href="tel:8 999 999 99 99">
+                8 999 999 99 99
               </a>
             </div>
           </div>
           <div className="header-mobile-contacts__phone">
-            <a className="page-header-02__button button" href="https://wa.me/79143333003" target="_blank">
+            <a className="page-header-02__button button" href="https://wa.me/111" target="_blank">
               <div className="button__inner">
                 <span className="button__text">Написать в WhatsApp</span>
               </div>
