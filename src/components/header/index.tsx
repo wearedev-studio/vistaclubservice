@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header = () => {
   return (
     <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
@@ -5,10 +7,10 @@ const Header = () => {
         <div className="page-header-02__content page-header-02__content_mobile-vertical-align_top">
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
-              <a className="page-header-02__brand-logo" href="">
+              <Link className="page-header-02__brand-logo" href="/">
                 ЛОГОТИП
                 {/* <img style={{ width: 125 }} alt="Grad" src="./images/006/049/455/6049455/250x/GetAuto_logo_general.svg" /> */}
-              </a>
+              </Link>
             </div>
             <div className="page-header-02__subheader wysiwyg-string">
               <strong>Поставка авто</strong>

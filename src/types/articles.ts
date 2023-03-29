@@ -1,3 +1,5 @@
+import { Category } from "./categories";
+
 export interface ArticlesResponse {
   data: {
     articles: Article[];
@@ -19,4 +21,13 @@ export interface Article {
   id: string;
   slug: string;
   title: string;
+  category: Category;
+  content: {
+    html: string
+  },
+  mainImage?: {
+    width: number,
+    height: number,
+    url: string
+  }
 }

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { Header } from "@/components/header";
 import { Welcome } from "@/components/welcome";
 import Head from "next/head";
@@ -18,8 +18,15 @@ import { CustomsBroker } from "@/components/customsBroker";
 import { Picture } from "@/components/picture";
 import { Menu } from "@/components/menu";
 import { CarEvaluation } from "@/components/carEvaluation";
+import { ArticleService } from "@/service/articles";
+import { Article } from "@/types/articles";
+import { BlogItems } from "@/components/blog/blog-articles";
 
-const Page: NextPage = () => {
+interface PageProps {
+  articles: Article[];
+}
+
+const Page: NextPage<PageProps> = ({ articles }) => {
   return (
     <>
       <Head>
@@ -43,9 +50,20 @@ const Page: NextPage = () => {
       <ButtonBlog />
       <Contacts />
       <CarEvaluation />
+      <BlogItems variant="home" articles={articles} title="Блог"/>
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await ArticleService.getAllArticles();
+  return {
+    props: {
+      articles: res.data.articles,
+      revalidate: 5,
+    },
+  };
 };
 
 export default Page;
