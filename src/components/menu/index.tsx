@@ -14,7 +14,7 @@ const Menu = () => {
             </a>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="#otzivy">
+            <a className="menu-01-item__link" href="#reviews">
               Отзывы
             </a>
           </li>
@@ -29,12 +29,12 @@ const Menu = () => {
                 </a>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="https://www.tks.ru/auto/calc/" target="_blank">
+                <a className="menu-01-item-sub__link" href="#calculator" >
                   Калькулятор стоимости авто
                 </a>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="http://auc.getauto-dv.ru/" target="_blank">
+                <a className="menu-01-item-sub__link" href="#cars">
                   Каталог автомобилей
                 </a>
               </li>
@@ -51,12 +51,12 @@ const Menu = () => {
             </a>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="https://instagram.com/get_auto_dv" target="_blank">
+                <a className="menu-01-item-sub__link" href="#contacts">
                   Instagram
                 </a>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="https://www.youtube.com/@getauto2684/videos">
+                <a className="menu-01-item-sub__link" href="#blog">
                   YouTube
                 </a>
               </li>

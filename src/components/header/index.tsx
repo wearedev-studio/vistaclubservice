@@ -1,13 +1,13 @@
 const Header = () => {
   return (
     <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
+      <a name="glav"/>
       <div className="page-header-02__inner section__content">
         <div className="page-header-02__content page-header-02__content_mobile-vertical-align_top">
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
               <a className="page-header-02__brand-logo" href="">
-                ЛОГОТИП
-                {/* <img style={{ width: 125 }} alt="Grad" src="./images/006/049/455/6049455/250x/GetAuto_logo_general.svg" /> */}
+                <img style={{ width: 125 }} alt="Grad" src="./images/008/786/001/photo_2023_03_28_16_00_45.svg" />
               </a>
             </div>
             <div className="page-header-02__subheader wysiwyg-string">
@@ -21,13 +21,16 @@ const Header = () => {
           <div className="page-header-02__right">
             <div className="page-header-02__contacts">
               <div className="page-header-02__phonesub wysiwyg-string">
-                <strong>Адрес</strong>
+                <strong>Адрес: </strong>
+                г.Якутск, окружное шоссе 4км, 14д
                 <br />
                 Звонок по РФ бесплатный
               </div>
               <div className="page-header-02__phone">
                 <a className="bzm-calltracking" href="tel:8 999 999 99 99">
-                  8 999 999 99 99
+                  8 914 273 50 05
+                  <br/>
+                  8 914 273 50 04
                 </a>
               </div>
               <a className="page-header-02__button button" href="https://wa.me/111" target="_blank">

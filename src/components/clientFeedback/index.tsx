@@ -1,6 +1,7 @@
 const ClientFeedback = () => {
     return (
       <div className="page-section">
+        <a name="reviews"/>
       <div className="media-47 page_section_57 section section_container-width_1200" id="">
         <div className="media-47__inner section__content">
           <div className="section__header section__header_align_center wysiwyg-string">

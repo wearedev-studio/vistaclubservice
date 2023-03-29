@@ -36,6 +36,7 @@ const Cars = () => {
   ];
   return (
     <div className="cards-05 page_section_15 section section_container-width_1200">
+      <a name="cars"/>
       <div className="cards-05__inner section__content">
         <div className="section__header wysiwyg-string">
           <h2>Любые автомобили на ваш выбор!</h2>

@@ -27,11 +27,11 @@ const Footer = () => {
               Online-аукционы
             </a>
             <br />
-            <a href="https://www.tks.ru/auto/calc/" target="_blank">
+            <a href="#calculator">
               Калькулятор стоимости авто
             </a>
             <br />
-            <a href="http://auc.getauto-dv.ru/" target="_blank">
+            <a href="#cars">
               Каталог автомобилей
             </a>
             <br />
@@ -41,7 +41,7 @@ const Footer = () => {
             <a href="#otzivy">
               <br />
             </a>
-            <a href="#otzivy">Отзывы</a>
+            <a href="#review">Отзывы</a>
             <br />
             <a href="https://instagram.com/get_auto_dv" target="_blank">
               Instagram

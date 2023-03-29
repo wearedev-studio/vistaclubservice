@@ -1,6 +1,7 @@
 const Reason = () => {
   return (
     <div className="page-section">
+      <a name="about"/>
       <div className="animated-section page_section_19 promo-04 section section_container-width_1200">
         <div className="promo-04__inner section__content">
           <div className="section__header wysiwyg-string">

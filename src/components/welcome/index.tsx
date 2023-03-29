@@ -4,7 +4,7 @@ const Welcome = () => (
       <div
         className="section__background-image"
         style={{
-          backgroundImage: "url(./images/005/143/375/5143375/1920xnoinc/aukcion-yaponiya-avto.jpg)",
+          backgroundImage: "url(./images/008/photo_2023-03-28_16-01-53.jpg)",
         }}
       />
     </div>

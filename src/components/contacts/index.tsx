@@ -1,6 +1,7 @@
 const Contacts = () => {
     return (
         <div className="page-section">
+            <a name="contacts"/>
           <div className="page_section_66 section section_container-width_1200 text-50" id="">
             <div className="text-50__inner section__content">
               <div className="section__header section__header_align_center wysiwyg-string">
