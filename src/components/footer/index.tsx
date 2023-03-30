@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="animated-section page_section_75 section section_container-width_1000 text-36">
@@ -13,46 +15,38 @@ const Footer = () => {
       <div className="text-36__inner section__content">
         <div className="text-36__title wysiwyg-string">
           <div>
-            <a href="#glav">Главная</a>
-            <a href="#about">
-              <br />
-            </a>
-            <a href="#about">О нас</a>
-            <a href="#shema">
-              <br />
-            </a>
-            <a href="#shema">Схема работы</a>
+            <Link href="/">Главная</Link>
             <br />
-            <a href="http://auc.getauto-dv.ru/" target="_blank">
+            <Link href="/#about">О нас</Link>
+            <br />
+            <Link href="/#shema">Схема работы</Link>
+            <br />
+            <Link href="/" target="_blank">
               Online-аукционы
-            </a>
+            </Link>
             <br />
-            <a href="#calculator">
-              Калькулятор стоимости авто
-            </a>
+            <Link href="#calculator">Калькулятор стоимости авто</Link>
             <br />
-            <a href="#cars">
-              Каталог автомобилей
-            </a>
+            <Link href="#cars">Каталог автомобилей</Link>
             <br />
-            <a href="http://auc.getauto-dv.ru/st?classic" target="_blank">
+            <Link href="/" target="_blank">
               Статистика продаж Online
-            </a>
-            <a href="#otzivy">
+            </Link>
+            <Link href="#otzivy">
               <br />
-            </a>
-            <a href="#review">Отзывы</a>
+            </Link>
+            <Link href="#review">Отзывы</Link>
             <br />
-            <a href="https://instagram.com/get_auto_dv" target="_blank">
+            <Link href="/" target="_blank">
               Instagram
-            </a>
-            <a href="#contacts">
+            </Link>
+            <Link href="#contacts">
               <br />
-            </a>
-            <a href="#contacts">Контакты</a>
+            </Link>
+            <Link href="#contacts">Контакты</Link>
             <br />
             <u>
-              <a href="#zvonok">ЗАКАЗАТЬ ЗВОНОК</a>
+              <Link href="#zvonok">ЗАКАЗАТЬ ЗВОНОК</Link>
             </u>
           </div>
         </div>

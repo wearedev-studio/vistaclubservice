@@ -1,7 +1,6 @@
 const Workflow = () => {
   return (
-    <div className="animated-section page_section_51 process-04 section section_container-width_1200" id="">
-        <a name="shema"/>
+    <div id="shema" className="animated-section page_section_51 process-04 section section_container-width_1200">
       <div className="section__background-image-container">
         <div
           className="section__background-image"
@@ -31,13 +30,13 @@ const Workflow = () => {
               Лично в офисе или по электронной почте.
               <a href="/files/005/143/783/5143783/original/dogovor-pokupki-avto-s-aukcionov-yaponii-icb-auto.pdf" target="_blank">
                 <strong>
-                  <br />{" "}
+                  <br />
                 </strong>
               </a>
               <a href="/files/005/143/783/5143783/original/dogovor-pokupki-avto-s-aukcionov-yaponii-icb-auto.pdf" target="_blank">
                 <strong />
               </a>
-              <a href="/files/007/500/675/7500675/original/getauto-dogovor.pdf" target="_blank">
+              <a href="/" target="_blank">
                 <strong>Смотреть договор</strong>
               </a>
             </div>
@@ -76,18 +75,20 @@ const Workflow = () => {
           </li>
         </ol>
         <div className="page-section">
-      <div className="button-01 page_section_58 section section_container-width_1200" id="">
-        <div className="button-01__inner section__content">
-          <div className="button-01__content">
-            <a className="button-01__item button button_style_1 button_visual-css button_has-shadow-hover" href="#zayavka"
-              ><div className="button__inner"><span className="button__text">Оставить заявку</span></div></a>
+          <div className="button-01 page_section_58 section section_container-width_1200">
+            <div className="button-01__inner section__content">
+              <div className="button-01__content">
+                <a className="button-01__item button button_style_1 button_visual-css button_has-shadow-hover" href="#zayavka">
+                  <div className="button__inner">
+                    <span className="button__text">Оставить заявку</span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-      </div>
-    </div>
-    
   );
 };
 

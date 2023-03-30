@@ -3,7 +3,6 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
-      <a name="glav"/>
       <div className="page-header-02__inner section__content">
         <div className="page-header-02__content page-header-02__content_mobile-vertical-align_top">
           <div className="page-header-02__left">

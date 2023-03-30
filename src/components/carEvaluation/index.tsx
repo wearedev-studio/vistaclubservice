@@ -1,8 +1,7 @@
 const CarEvaluation = () => {
   return (
-    <div className="animated-section form-06 page_section_73 section section_container-width_800 ng-scope animated-section_hidden animated-section_visible" id="" make-scope="" style={{}}>
+    <div className="animated-section form-06 page_section_73 section section_container-width_800 ng-scope animated-section_hidden animated-section_visible" make-scope="" style={{}}>
       <div className="form-06__inner section__content">
-        <a name="calculator"/>
         <div className="section__header section__header_align_center wysiwyg-string">
           <div>Получите оценку стоимости автомобиля за 15 мин!</div>
         </div>

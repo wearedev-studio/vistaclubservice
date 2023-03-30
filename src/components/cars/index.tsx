@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Pagination} from "swiper";
+import { Pagination } from "swiper";
 
 interface CarProps {
   name: string;
@@ -36,7 +36,6 @@ const Cars = () => {
   ];
   return (
     <div className="cards-05 page_section_15 section section_container-width_1200">
-      <a name="cars"/>
       <div className="cards-05__inner section__content">
         <div className="section__header wysiwyg-string">
           <h2>Любые автомобили на ваш выбор!</h2>
@@ -46,7 +45,7 @@ const Cars = () => {
           <div className="cards-05-carousel__list-container">
             <div className="cards-05-carousel__list cards-05-list flexible-list_mobile-columns_1 page_section_15__list">
               <Swiper
-              modules={[Pagination]}
+                modules={[Pagination]}
                 speed={1000}
                 loop={false}
                 autoplay={{
@@ -55,9 +54,9 @@ const Cars = () => {
                 slidesPerView={1.3}
                 spaceBetween={10}
                 pagination={{
-                  el: '.page_section_15_swiper_pagination',
-                  type: 'bullets',
-                  clickable: true
+                  el: ".page_section_15_swiper_pagination",
+                  type: "bullets",
+                  clickable: true,
                 }}
                 breakpoints={{
                   576: {
