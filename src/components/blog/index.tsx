@@ -2,6 +2,7 @@ const Blog = () => {
     return (
         <div className="media-47 page_section_63 section section_container-width_1200" id="">
             <div className="media-47__inner section__content">
+                <a name="blog"/>
               <div className="section__header section__header_align_center wysiwyg-string">
                 <h3>Смотрите наш&nbsp;видео-блог на <a href="https://www.youtube.com/@getauto2684/videos" target="_blank">YouTube</a></h3>
               </div>

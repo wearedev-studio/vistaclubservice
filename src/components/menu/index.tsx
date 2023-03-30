@@ -21,7 +21,7 @@ const Menu = () => {
             </Link>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <Link className="menu-01-item__link" href="/#otzivy">
+            <Link className="menu-01-item__link" href="#reviews">
               Отзывы
             </Link>
           </li>
@@ -36,12 +36,12 @@ const Menu = () => {
                 </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="/" target="_blank">
+                <Link className="menu-01-item-sub__link" href="#calculator">
                   Калькулятор стоимости авто
                 </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="/" target="_blank">
+                <Link className="menu-01-item-sub__link" href="#cars">
                   Каталог автомобилей
                 </Link>
               </li>
@@ -58,12 +58,12 @@ const Menu = () => {
             </Link>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="/" target="_blank">
+                <Link className="menu-01-item-sub__link" href="#contacts">
                   Instagram
                 </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="/">
+                <Link className="menu-01-item-sub__link" href="#blog">
                   YouTube
                 </Link>
               </li>

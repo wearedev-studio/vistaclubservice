@@ -1,6 +1,7 @@
 const Workflow = () => {
   return (
     <div className="animated-section page_section_51 process-04 section section_container-width_1200" id="">
+        <a name="shema"/>
       <div className="section__background-image-container">
         <div
           className="section__background-image"
