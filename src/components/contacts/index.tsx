@@ -1,3 +1,8 @@
+import React from "react";
+
+const currentYear = new
+Date().getFullYear();
+
 const Contacts = () => {
     return (
         <div className="page-section">
@@ -13,7 +18,7 @@ const Contacts = () => {
                   <div className="text-50__text1 wysiwyg-string">
                     <strong>Адрес:</strong><br />
                     г.Якутск, окружное шоссе 4км, 14д<a href="https://www.rusprofile.ru/id/10465319" target="_blank"><br /> </a
-                    ><a href="https://www.rusprofile.ru/id/10459267" target="_blank">ООО «НАЗВАНИЕ»</a> © 2016<br />
+                    ><a href="https://www.rusprofile.ru/id/10459267" target="_blank">ООО «НАЗВАНИЕ»</a> © {currentYear}<br />
                     ОГРН: 1162508051860<br />
                     ИНН:&nbsp;2508126367<br />
                   </div>
