@@ -3,32 +3,28 @@ import {Pagination} from "swiper";
 
 interface CarProps {
   name: string;
-  img: string;
+  // img: string;
   price: string;
   url: string;
 }
 const Cars = () => {
   const data: CarProps[] = [
     {
-      img: "./images/006/040/885/6040885/600x950crop/getauto_1.jpg",
       name: "Авто под полную пошлину",
       price: "от 500 000 руб.",
       url: "",
     },
     {
-      img: "./images/006/040/886/6040886/600x950crop/getauto_2.jpg",
       name: "Конструкторы и Распилы",
       price: "от 250 000 руб.",
       url: "",
     },
     {
-      img: "./images/006/040/887/6040887/600x950crop/getauto_3.jpg",
       name: "Грузовики",
       price: "от 700 000 руб.",
       url: "",
     },
     {
-      img: "./images/006/040/888/6040888/600x950crop/getauto_4.jpg",
       name: "Спецтехника",
       price: "от 400 000 руб.",
       url: "",

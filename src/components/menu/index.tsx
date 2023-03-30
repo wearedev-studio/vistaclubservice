@@ -1,71 +1,81 @@
+import Link from "next/link";
+
 const Menu = () => {
   return (
     <div className="menu-01 menu-01_align_center page_section_7 section section_container-width_1200">
       <div className="menu-01__inner section__content">
         <ul className="menu-01-list">
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="#about">
+            <Link className="menu-01-item__link" href="/#about">
               О компании
-            </a>
+            </Link>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="#shema">
+            <Link className="menu-01-item__link" href="/blog">
+              Блог
+            </Link>
+          </li>
+          <li className="menu-01-list__item menu-01-item">
+            <Link className="menu-01-item__link" href="/#shema">
               Схема работы
-            </a>
+            </Link>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="#reviews">
+            <Link className="menu-01-item__link" href="#reviews">
               Отзывы
-            </a>
+            </Link>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="http://auc.getauto-dv.ru/" target="_blank">
+            <Link className="menu-01-item__link" href="/" target="_blank">
               Аукционы Online
-            </a>
+            </Link>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="http://auc.getauto-dv.ru/" target="_blank">
+                <Link className="menu-01-item-sub__link" href="/" target="_blank">
                   Аукционы в режиме реального времени
-                </a>
+                </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="#calculator" >
+                <Link className="menu-01-item-sub__link" href="#calculator" >
+               
                   Калькулятор стоимости авто
-                </a>
+                </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="#cars">
+                <Link className="menu-01-item-sub__link" href="#cars">
+
                   Каталог автомобилей
-                </a>
+                </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="http://auc.getauto-dv.ru/st?classic" target="_blank">
+                <Link className="menu-01-item-sub__link" href="/" target="_blank">
                   Статистика продаж Online
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="https://instagram.com/get_auto_dv" target="_blank">
+            <Link className="menu-01-item__link" href="/" target="_blank">
               Мы в соц. сетях
-            </a>
+            </Link>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="#contacts">
+                <Link className="menu-01-item-sub__link" href="#contacts">
                   Instagram
-                </a>
+                </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <a className="menu-01-item-sub__link" href="#blog">
+
+                <Link className="menu-01-item-sub__link" href="#blog">
                   YouTube
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <a className="menu-01-item__link" href="#contacts">
+            <Link className="menu-01-item__link" href="/#contacts">
               Контакты
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -105,46 +115,46 @@ const Menu = () => {
         <div className="page-section-mobile-nav__list">
           <ul className="page-section-mobile-nav__list-inner">
             <li className="page-section-mobile-nav__item">
-              <a className="page-section-mobile-nav__link" href="#about" style={{ fontSize: 15 }}>
+              <Link className="page-section-mobile-nav__link" href="/#about" style={{ fontSize: 15 }}>
                 О компании
-              </a>
+              </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <a className="page-section-mobile-nav__link" href="#shema" style={{ fontSize: 15 }}>
+              <Link className="page-section-mobile-nav__link" href="/#shema" style={{ fontSize: 15 }}>
                 Схема работы
-              </a>
+              </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <a className="page-section-mobile-nav__link" href="#otzivy" style={{ fontSize: 15 }}>
+              <Link className="page-section-mobile-nav__link" href="/#otzivy" style={{ fontSize: 15 }}>
                 Отзывы
-              </a>
+              </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <a
+              <Link
                 className="page-section-mobile-nav__link page-section-mobile-nav__link_has-sub"
-                href=""
+                href="/"
                 ng-class="{'page-section-mobile-nav__link_active' : mobileNav.activeSubIndex === 3}"
                 ng-click="mobileNav.toggleSub(3)"
                 style={{ fontSize: 15 }}
               >
                 Аукционы Online
-              </a>
+              </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <a
+              <Link
                 className="page-section-mobile-nav__link page-section-mobile-nav__link_has-sub"
-                href=""
+                href="/"
                 ng-class="{'page-section-mobile-nav__link_active' : mobileNav.activeSubIndex === 4}"
                 ng-click="mobileNav.toggleSub(4)"
                 style={{ fontSize: 15 }}
               >
                 Мы в соц. сетях
-              </a>
+              </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <a className="page-section-mobile-nav__link" href="#contacts" style={{ fontSize: 15 }}>
+              <Link className="page-section-mobile-nav__link" href="/#contacts" style={{ fontSize: 15 }}>
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -152,48 +162,48 @@ const Menu = () => {
           <div className="page-section-mobile-nav__sub" ng-cloak="" ng-if="mobileNav.activeSubIndex === 3">
             <ul className="page-section-mobile-nav__sub-inner">
               <li className="page-section-mobile-nav__sub-main-item">
-                <a className="page-section-mobile-nav__sub-main-link" href="http://auc.getauto-dv.ru/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-main-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Аукционы Online
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="http://auc.getauto-dv.ru/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Аукционы в режиме реального времени
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="https://www.tks.ru/auto/calc/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Калькулятор стоимости авто
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="http://auc.getauto-dv.ru/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Каталог автомобилей
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="http://auc.getauto-dv.ru/st?classic" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/st?classic" target="_blank" style={{ fontSize: 15 }}>
                   Статистика продаж Online
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="page-section-mobile-nav__sub" ng-cloak="" ng-if="mobileNav.activeSubIndex === 4">
             <ul className="page-section-mobile-nav__sub-inner">
               <li className="page-section-mobile-nav__sub-main-item">
-                <a className="page-section-mobile-nav__sub-main-link" href="https://instagram.com/get_auto_dv" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-main-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Мы в соц. сетях
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="https://instagram.com/get_auto_dv" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
                   Instagram
-                </a>
+                </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <a className="page-section-mobile-nav__sub-link" href="https://www.youtube.com/@getauto2684/videos" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="/" style={{ fontSize: 15 }}>
                   YouTube
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

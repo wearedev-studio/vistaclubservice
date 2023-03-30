@@ -3,14 +3,27 @@ import { ArticleResponse, ArticlesResponse } from "@/types/articles";
 import { gql } from "@apollo/client";
 
 class ArticleService {
-  static async getAllArticles() {
+  static async getAllArticles(count: number = 100) {
     const data: ArticlesResponse = await apolloClient.query({
       query: gql`
         query AllArticles {
-          articles {
+          articles (first: ${count}) {
             id
             slug
             title
+            category {
+              id
+              name
+              slug
+            }
+            content {
+              html
+            }
+            mainImage {
+              url
+              width
+              height
+            }
           }
         }
       `,
@@ -25,6 +38,19 @@ class ArticleService {
             id
             slug
             title
+            category {
+              id
+              name
+              slug
+            }
+            content {
+              html
+            }
+            mainImage {
+              url
+              width
+              height
+            }
           }
         }
       `,
