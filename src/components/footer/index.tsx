@@ -1,16 +1,12 @@
 import { modalCallbackUpdate } from "@/pullstate";
 import Link from "next/link";
+import bgImage from "../../../public/images/005/143/700/5143700/1920xnoinc/dostavka-avtomobilej-iz-yaponii.jpg";
 
 const Footer = () => {
   return (
-    <div className="animated-section page_section_75 section section_container-width_1000 text-36">
+    <footer className="footer animated-section page_section_75 section section_container-width_1000 text-36">
       <div className="section__background-image-container">
-        <div
-          className="section__background-image"
-          style={{
-            backgroundImage: "url(./images/005/143/700/5143700/1920xnoinc/dostavka-avtomobilej-iz-yaponii.jpg)",
-          }}
-        />
+        <img loading="lazy" className="footer__bg-image" src={bgImage.src} alt="Задний фон" />
       </div>
       <div className="section__background-mask" />
       <div className="text-36__inner section__content">
@@ -52,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
