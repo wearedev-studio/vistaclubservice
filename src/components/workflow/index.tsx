@@ -1,3 +1,5 @@
+import { modalOrderUpdate } from "@/pullstate";
+
 const Workflow = () => {
   return (
     <div id="shema" className="animated-section page_section_51 process-04 section section_container-width_1200">
@@ -78,11 +80,11 @@ const Workflow = () => {
           <div className="button-01 page_section_58 section section_container-width_1200">
             <div className="button-01__inner section__content">
               <div className="button-01__content">
-                <a className="button-01__item button button_style_1 button_visual-css button_has-shadow-hover" href="#zayavka">
+                <button onClick={() => modalOrderUpdate(true)} className="button-01__item button button_style_1 button_visual-css button_has-shadow-hover">
                   <div className="button__inner">
                     <span className="button__text">Оставить заявку</span>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
           </div>

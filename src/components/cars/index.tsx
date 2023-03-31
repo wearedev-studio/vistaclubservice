@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { modalCheckPricePoshlinaUpdate } from "@/pullstate";
 
 interface CarProps {
   name: string;
@@ -8,6 +9,7 @@ interface CarProps {
   url: string;
 }
 const Cars = () => {
+  const handler = () => modalCheckPricePoshlinaUpdate(true);
   const data: CarProps[] = [
     {
       name: "Авто под полную пошлину",
@@ -69,11 +71,10 @@ const Cars = () => {
                   return (
                     <SwiperSlide key={item.name}>
                       <div style={{ padding: 0 }} className="cards-05-item cards-05-list__item flexible-list__item">
-                        <a
+                        <div
                           className="cards-05-item__inner"
-                          href="#poshlina"
                           style={{
-                            backgroundImage: `url(${item.img})`,
+                            backgroundImage: `url(${item.url})`,
                           }}
                         >
                           <div className="cards-05-item__content">
@@ -84,7 +85,7 @@ const Cars = () => {
                               <u>{item.price}</u>
                             </div>
                           </div>
-                        </a>
+                        </div>
                       </div>
                     </SwiperSlide>
                   );

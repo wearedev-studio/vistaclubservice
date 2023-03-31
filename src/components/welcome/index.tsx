@@ -1,3 +1,5 @@
+import { modalCheckPriceUpdate, modalQuestionManagerUpdate } from "@/pullstate";
+
 const Welcome = () => (
   <div className="page_section_9 promo-05 section section_container-width_1200">
     <div className="section__background-image-container">
@@ -30,16 +32,16 @@ const Welcome = () => (
           <br />✓ Бесплатно оценим стоимость покупки и доставки автомобиля до вашего города!
         </div>
         <div className="promo-05-content__btns-container">
-          <a className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover" href="#cena">
+          <button onClick={() => modalCheckPriceUpdate(true)} className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
             <div className="button__inner">
               <span className="button__text">Узнать стоимость</span>
             </div>
-          </a>
-          <a className="promo-05-content__btn-2 button button_style_2 button_visual-css button_has-shadow-hover" href="#konsul">
+          </button>
+          <button onClick={() => modalQuestionManagerUpdate(true)} className="promo-05-content__btn-2 button button_style_2 button_visual-css button_has-shadow-hover">
             <div className="button__inner">
               <span className="button__text">Задать вопрос менеджеру</span>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>

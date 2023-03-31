@@ -1,3 +1,4 @@
+import { modalQuestionManagerUpdate } from "@/pullstate";
 import { CarInfo } from "./carInfo";
 
 const Purchase = () => {
@@ -131,11 +132,11 @@ const Purchase = () => {
       <div className="animated-section button-02 page_section_48 section section_container-width_1200">
         <div className="button-02__inner section__content">
           <div className="button-02__content button-02__content_center">
-            <a className="button-02__item button-02__item_1 button button_style_1 button_visual-css button_has-shadow-hover" href="#konsul">
+            <button onClick={() => modalQuestionManagerUpdate(true)} className="button-02__item button-02__item_1 button button_style_1 button_visual-css button_has-shadow-hover">
               <div className="button__inner">
                 <span className="button__text">Задать вопрос менеджеру</span>
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { modalCheckPriceUpdate } from "@/pullstate";
+
 interface IProps {
   imgPath: string;
   name: string;
@@ -34,11 +36,11 @@ const CarInfo = ({ imgPath, name, driveUnit, power, price, year, volume, mileage
           <br />
         </div>
         <div className="cards-06-item__button-container cards-06-item__button-container_with-align">
-          <a className="cards-06-item__button button" href="#cena">
+          <button onClick={() => modalCheckPriceUpdate(true)} className="cards-06-item__button button">
             <div className="button__inner">
               <span className="button__text">Бесплатный расчет</span>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>

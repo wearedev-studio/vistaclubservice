@@ -1,3 +1,4 @@
+import { modalCallbackUpdate } from "@/pullstate";
 import Link from "next/link";
 
 const Footer = () => {
@@ -46,7 +47,7 @@ const Footer = () => {
             <Link href="#contacts">Контакты</Link>
             <br />
             <u>
-              <Link href="#zvonok">ЗАКАЗАТЬ ЗВОНОК</Link>
+              <button style={{backgroundColor: 'transparent', outline: 0, border: 0}} onClick={()=>{modalCallbackUpdate(true)}}>ЗАКАЗАТЬ ЗВОНОК</button>
             </u>
           </div>
         </div>

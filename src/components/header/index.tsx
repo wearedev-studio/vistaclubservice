@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-const currentYear = new
-Date().getFullYear();
+const currentYear = new Date().getFullYear();
 const Header = () => {
   return (
     <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
@@ -12,12 +11,7 @@ const Header = () => {
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
               <a className="page-header-02__brand-logo" href="">
-                <Image
-                src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg"
-                alt="Grad"
-                width={125} 
-                height={125}
-                />
+                <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} />
               </a>
             </div>
             <div className="page-header-02__subheader wysiwyg-string">
@@ -39,8 +33,7 @@ const Header = () => {
               <div className="page-header-02__phone">
                 <a className="bzm-calltracking" href="tel:8 914 273 50 05; 8 914 273 50 04">
                   8 914 273 50 05
-                  <br/>
-                  8 914 273 50 04
+                  <br />8 914 273 50 04
                 </a>
               </div>
               <a className="page-header-02__button button" href="https://wa.me/111" target="_blank">
@@ -67,9 +60,8 @@ const Header = () => {
             </div>
             <div className="header-mobile-contacts__phone-num">
               <a className="bzm-calltracking" href="tel:8 914 273 50 05; 8 914 273 50 04">
-                  8 914 273 50 05
-                  <br/>
-                  8 914 273 50 04
+                8 914 273 50 05
+                <br />8 914 273 50 04
               </a>
             </div>
           </div>
