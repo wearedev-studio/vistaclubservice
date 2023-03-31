@@ -112,6 +112,16 @@ const Menu = () => {
         <div className="page-section-mobile-nav__list">
           <ul className="page-section-mobile-nav__list-inner">
             <li className="page-section-mobile-nav__item">
+              <Link className="page-section-mobile-nav__link" href="/" style={{ fontSize: 15 }}>
+                Главная
+              </Link>
+            </li>
+            <li className="page-section-mobile-nav__item">
+              <Link className="page-section-mobile-nav__link" href="/blog" style={{ fontSize: 15 }}>
+                Блог
+              </Link>
+            </li>
+            <li className="page-section-mobile-nav__item">
               <Link className="page-section-mobile-nav__link" href="/#about" style={{ fontSize: 15 }}>
                 О компании
               </Link>
