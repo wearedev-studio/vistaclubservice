@@ -10,6 +10,7 @@ const Header = () => {
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
               <Link className="page-header-02__brand-logo" href="/">
+                {/* Такие изображения (пути до изображений) нужно импортить желательно через import. Пример - footer. Чтобы пути не ломались в внутренних страницах */}
                 <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} />
               </Link>
             </div>
