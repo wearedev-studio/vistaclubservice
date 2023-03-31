@@ -90,9 +90,10 @@ const CarEvaluation = () => {
               </form>
             </div>
           </div>
-          <div className="form-06__success ng-hide" ng-show="fc[('form' + 73)].success">
+          {/* TOOD: Show if confirm */}
+          {/* <div className="form-06__success ng-hide" ng-show="fc[('form' + 73)].success">
             Спасибо! Ваше сообщение получено
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

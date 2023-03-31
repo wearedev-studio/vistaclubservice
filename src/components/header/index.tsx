@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
 
 const currentYear = new Date().getFullYear();
 const Header = () => {
@@ -10,9 +9,9 @@ const Header = () => {
         <div className="page-header-02__content page-header-02__content_mobile-vertical-align_top">
           <div className="page-header-02__left">
             <div className="page-header-02__brand">
-              <a className="page-header-02__brand-logo" href="">
+              <Link className="page-header-02__brand-logo" href="/">
                 <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} />
-              </a>
+              </Link>
             </div>
             <div className="page-header-02__subheader wysiwyg-string">
               <strong>Поставка авто</strong>

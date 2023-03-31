@@ -10,10 +10,10 @@ const Article = ({ article, variant }: ArticleProps) => {
   return (
     <div className={`article article_${variant}`}>
       <div className="site-container article__container">
-        <p className="article__main-title">{article.title}</p>
         <div className="article__img-wrapper">
           <img src={!article?.mainImage ? imagePlaceholder.src : article.mainImage.url} alt="" className="article__img" />
         </div>
+        <p className="article__main-title">{article.title}</p>
         <div dangerouslySetInnerHTML={{ __html: `${article.content.html}` }} className="article__content" />
       </div>
     </div>

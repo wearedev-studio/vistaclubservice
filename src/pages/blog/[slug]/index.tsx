@@ -1,4 +1,5 @@
 import { Article } from "@/components/blog/article";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Menu } from "@/components/menu";
 import { ArticleService } from "@/service/articles";
@@ -20,6 +21,7 @@ const Page: NextPage<PageProps> = ({ article }) => {
       <Header />
       <Menu />
       <Article article={article} variant="blog"/>
+      <Footer />
     </>
   );
 };
