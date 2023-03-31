@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 const Contacts = () => {
   return (
     <div id="contacts" className="page-section">
@@ -12,14 +14,14 @@ const Contacts = () => {
               <div className="text-50__text1 wysiwyg-string">
                 <strong>Адрес:</strong>
                 <br />
-                г. Находка, ул. Минская 6
+                г.Якутск, окружное шоссе 4км, 14д
                 <a href="https://www.rusprofile.ru/id/10465319" target="_blank">
                   <br />{" "}
                 </a>
                 <a href="https://www.rusprofile.ru/id/10459267" target="_blank">
-                  ООО «Гет Авто»
+                  ООО «НАЗВАНИЕ»
                 </a>{" "}
-                © 2016
+                © {currentYear}
                 <br />
                 ОГРН: 1162508051860
                 <br />
@@ -33,21 +35,24 @@ const Contacts = () => {
                 <strong>Способы связи:</strong>
                 <br />
                 <strong>&nbsp;</strong>
-                <a href="tel:88002508323">📞 8 (800) 250-83-23</a>
+                <a href="tel:8 914 273 50 05">📞 8 914 273 50 05</a>
                 <br />
-                <a href="/" target="_blank">
-                  📧 example.company@gmail.com
+                <strong>&nbsp;</strong>
+                <a href="tel:8 914 273 50 04">📞 8 914 273 50 04</a>
+                <br />
+                <a href="mailto:getauto.company@gmail.com" target="_blank">
+                  📧 getauto.company@gmail.com
                 </a>
                 <br />
-                <a href="/" target="_blank">
+                <a href="https://wa.me/79143333003" target="_blank">
                   📲 Написать в WhatsApp
                 </a>
                 <br />
-                <a href="/" target="_blank">
+                <a href="https://instagram.com/get_auto_dv" target="_blank">
                   📸 Наш Instagram
                 </a>
                 <br />
-                <a href="/" target="_blank"></a>
+                <a href="https://wa.me/79240067784" target="_blank"></a>
               </div>
               <div className="text-50__divider"></div>
             </div>
