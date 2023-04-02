@@ -1,8 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Header as HeaderProps } from "@/types/header";
+import { convertText } from "@/helpers/convertText";
+
+interface PageProps {
+  headerData: HeaderProps;
+}
 
 const currentYear = new Date().getFullYear();
-const Header = () => {
+const Header = ({ headerData }: PageProps) => {
+  const phone1 = headerData.phone1;
+  const phone2 = headerData.phone2;
+
+  const parsePhone1 = convertText(headerData.phone1);
+  const parsePhone2 = convertText(headerData.phone2);
+  const parseWhatsapp = convertText(headerData.whatsapp);
   return (
     <div className="page-header-02 page-header-02_view_01 page_section_2 section section_container-width_1200">
       <div className="page-header-02__inner section__content">
@@ -14,29 +26,21 @@ const Header = () => {
                 <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} />
               </Link>
             </div>
-            <div className="page-header-02__subheader wysiwyg-string">
-              <strong>Поставка авто</strong>
-              <br />
-              <strong>из Японии, Кореи, Китая, ОАЭ</strong>
-              <br />
-              ООО «НАЗВАНИЕ» ©{currentYear}
-            </div>
+            <div dangerouslySetInnerHTML={{__html: `${headerData.description.html}`}} className="page-header-02__subheader wysiwyg-string"></div>
           </div>
           <div className="page-header-02__right">
             <div className="page-header-02__contacts">
-              <div className="page-header-02__phonesub wysiwyg-string">
-                <strong>Адрес: </strong>
-                г.Якутск, окружное шоссе 4км, 14д
-                <br />
-                Звонок по РФ бесплатный
-              </div>
+              <div dangerouslySetInnerHTML={{__html: `${headerData.address.html}`}} className="page-header-02__phonesub wysiwyg-string"></div>
               <div className="page-header-02__phone">
-                <a className="bzm-calltracking" href="tel:8 914 273 50 05; 8 914 273 50 04">
-                  8 914 273 50 05
-                  <br />8 914 273 50 04
+                <a className="bzm-calltracking" href={`tel:${parsePhone1}`}>
+                  {phone1}
+                </a>
+                <br />
+                <a className="bzm-calltracking" href={`tel:${parsePhone2}`}>
+                  {phone2}
                 </a>
               </div>
-              <a className="page-header-02__button button" href="https://wa.me/111" target="_blank">
+              <a className="page-header-02__button button" href={`https://wa.me/${parseWhatsapp}`} target="_blank">
                 <div className="button__inner">
                   <span className="button__text">Написать в WhatsApp</span>
                 </div>
