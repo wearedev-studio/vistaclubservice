@@ -24,14 +24,17 @@ import { HeaderService } from "@/service/header";
 import { Header as HeaderProps } from "@/types/header";
 import { WelcomeSectionService } from "@/service/welcomeSection";
 import { WelcomeSection } from "@/types/welcomeSections";
+import { WhyWeSectionService } from "@/service/welcomeSection copy";
+import { WhyWeSection } from "@/types/whyWeSection";
 
 interface PageProps {
   articles: Article[];
   headerData: HeaderProps;
   welcomeSectionData: WelcomeSection;
+  whyWeSectionData: WhyWeSection;
 }
 
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData }) => {
   return (
     <>
       <Head>
@@ -43,7 +46,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData })
       <Menu />
       <Welcome welcomeSectionData={welcomeSectionData} />
       <Cars />
-      <Reason />
+      <Reason whyWeSectionData={whyWeSectionData} />
       <Picture />
       <CustomsBroker />
       <Purchase />
@@ -65,11 +68,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const res = await ArticleService.getAllArticles();
   const { data: headerData } = await HeaderService.getAll();
   const { data: welcomeSectionData } = await WelcomeSectionService.getAll();
+  const { data: whyWeSectionsData } = await WhyWeSectionService.getAll();
   return {
     props: {
       articles: res.data.articles,
       headerData: headerData.headers[0],
       welcomeSectionData: welcomeSectionData.welcomeSections[0],
+      whyWeSectionData: whyWeSectionsData.whyWeSections[0],
       revalidate: 5,
     },
   };
