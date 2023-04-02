@@ -3,7 +3,7 @@ import { HeaderResponse } from "@/types/header";
 import { gql } from "@apollo/client";
 
 class HeaderService {
-  static async getHeader() {
+  static async getAll() {
     const data: HeaderResponse = await apolloClient.query({
       query: gql`
         query Header {

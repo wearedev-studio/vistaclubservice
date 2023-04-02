@@ -5,7 +5,6 @@ import Head from "next/head";
 import { Cars } from "@/components/cars";
 import { Footer } from "@/components/footer";
 import { Reason } from "@/components/reason";
-import { Guarantees } from "@/components/guarantees";
 import { Purchase } from "@/components/purchase";
 import { Workflow } from "@/components/workflow";
 import { ClientFeedback } from "@/components/clientFeedback";
@@ -23,13 +22,16 @@ import { Article } from "@/types/articles";
 import { BlogItems } from "@/components/blog/blog-articles";
 import { HeaderService } from "@/service/header";
 import { Header as HeaderProps } from "@/types/header";
+import { WelcomeSectionService } from "@/service/welcomeSection";
+import { WelcomeSection } from "@/types/welcomeSections";
 
 interface PageProps {
   articles: Article[];
   headerData: HeaderProps;
+  welcomeSectionData: WelcomeSection;
 }
 
-const Page: NextPage<PageProps> = ({ articles, headerData }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData }) => {
   return (
     <>
       <Head>
@@ -39,7 +41,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData }) => {
       </Head>
       <Header headerData={headerData} />
       <Menu />
-      <Welcome />
+      <Welcome welcomeSectionData={welcomeSectionData} />
       <Cars />
       <Reason />
       <Picture />
@@ -61,11 +63,13 @@ const Page: NextPage<PageProps> = ({ articles, headerData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await ArticleService.getAllArticles();
-  const { data: headerData } = await HeaderService.getHeader();
+  const { data: headerData } = await HeaderService.getAll();
+  const { data: welcomeSectionData } = await WelcomeSectionService.getAll();
   return {
     props: {
       articles: res.data.articles,
       headerData: headerData.headers[0],
+      welcomeSectionData: welcomeSectionData.welcomeSections[0],
       revalidate: 5,
     },
   };

@@ -31,7 +31,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await ArticleService.getAllArticles();
-  const { data: headerData } = await HeaderService.getHeader();
+  const { data: headerData } = await HeaderService.getAll();
   return {
     props: {
       articles: res.data.articles,

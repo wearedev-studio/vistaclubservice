@@ -1,6 +1,11 @@
 import { modalCheckPriceUpdate, modalQuestionManagerUpdate } from "@/pullstate";
+import { WelcomeSection } from "@/types/welcomeSections";
 
-const Welcome = () => (
+interface ComponentProps {
+  welcomeSectionData: WelcomeSection;
+}
+
+const Welcome = ({ welcomeSectionData }: ComponentProps) => (
   <div className="page_section_9 promo-05 section section_container-width_1200">
     <div className="section__background-image-container">
       <div
@@ -13,24 +18,8 @@ const Welcome = () => (
     <div className="section__background-mask" />
     <div className="promo-05__inner section__content">
       <div className="promo-05-content">
-        <div className="promo-05-content__title wysiwyg-string">
-          <h1>
-            <strong>Автомобили и спецтехника</strong>
-            <br />
-            <strong>с аукционов Японии,</strong>
-            <br />
-            <strong>стоянок Кореи, Китая и ОАЭ!</strong>
-            <br />
-            Подберем, купим,&nbsp;растаможим
-            <br />и доставить до вас!
-          </h1>
-        </div>
-        <div className="promo-05-content__text wysiwyg-string">
-          ✓ Фиксируем цену и сроки в договоре;
-          <br />
-          <strong>✓</strong> Страхуем автомобиль на всех этапах транспортировки;
-          <br />✓ Бесплатно оценим стоимость покупки и доставки автомобиля до вашего города!
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: `${welcomeSectionData.title.html}` }} className="promo-05-content__title wysiwyg-string"></div>
+        <div dangerouslySetInnerHTML={{ __html: `${welcomeSectionData.features.html}` }} className="promo-05-content__text wysiwyg-string"></div>
         <div className="promo-05-content__btns-container">
           <button onClick={() => modalCheckPriceUpdate(true)} className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
             <div className="button__inner">

@@ -3,12 +3,11 @@ import Image from "next/image";
 import { Header as HeaderProps } from "@/types/header";
 import { convertText } from "@/helpers/convertText";
 
-interface PageProps {
+interface ComponentProps {
   headerData: HeaderProps;
 }
 
-const currentYear = new Date().getFullYear();
-const Header = ({ headerData }: PageProps) => {
+const Header = ({ headerData }: ComponentProps) => {
   const phone1 = headerData.phone1;
   const phone2 = headerData.phone2;
 

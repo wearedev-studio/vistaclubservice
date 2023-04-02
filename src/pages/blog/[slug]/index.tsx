@@ -41,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async ({}) => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params!.slug;
   const res = await ArticleService.getArticleBySlug(`${slug}`);
-  const { data: headerData } = await HeaderService.getHeader();
+  const { data: headerData } = await HeaderService.getAll();
   return {
     props: {
       article: res.data.article,
