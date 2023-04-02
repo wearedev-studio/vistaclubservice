@@ -67,7 +67,9 @@ const Page: NextPage<PageProps> = ({
       <Cars anyCarChoiceSectionData={anyCarChoiceSectionData} />
       <Reason whyWeSectionData={whyWeSectionData} />
       <Picture />
+      {/* TODO: koper0nat */}
       <CustomsBroker />
+      {/* koper0nat */}
       <Purchase />
       <Workflow />
       <ClientFeedback />
