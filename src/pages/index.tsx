@@ -9,6 +9,7 @@ import { HeaderService } from "@/service/header";
 import { WelcomeSectionService } from "@/service/welcomeSection";
 import { WhyWeSectionService } from "@/service/welcomeSection copy";
 import { AnyCarChoiceSetionService } from "@/service/anyCarChoiceSection"
+import { CustomsBrokersSectionService } from "@/service/customsBrokersSection";
 
 // Import Components
 import { Header } from "@/components/header";
@@ -35,6 +36,7 @@ import { Header as HeaderProps } from "@/types/header";
 import { WelcomeSection } from "@/types/welcomeSections";
 import { WhyWeSection } from "@/types/whyWeSection";
 import { AnyCarChoiceSection } from "@/types/anyCarChoiceSection";
+import { CustomBrokerSection } from "@/types/customBrokerSection";
 
 // Interface For Page Props
 interface PageProps {
@@ -43,6 +45,7 @@ interface PageProps {
   welcomeSectionData: WelcomeSection;
   whyWeSectionData: WhyWeSection;
   anyCarChoiceSectionData: AnyCarChoiceSection;
+  customBrokerSectionData: CustomBrokerSection;
 }
 
 // Create Page
@@ -52,6 +55,7 @@ const Page: NextPage<PageProps> = ({
   welcomeSectionData,
   whyWeSectionData,
   anyCarChoiceSectionData,
+  customBrokerSectionData,
 }) => {
 
   return (
@@ -68,7 +72,7 @@ const Page: NextPage<PageProps> = ({
       <Reason whyWeSectionData={whyWeSectionData} />
       <Picture />
       {/* TODO: koper0nat */}
-      <CustomsBroker />
+      <CustomsBroker customBrokerSectionData={customBrokerSectionData} />
       {/* koper0nat */}
       <Purchase />
       <Workflow />
@@ -93,6 +97,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: welcomeSectionData } = await WelcomeSectionService.getAll();
   const { data: whyWeSectionsData } = await WhyWeSectionService.getAll();
   const { data: anyCarChoiceSectionsData } = await AnyCarChoiceSetionService.getAll();
+  const { data: customsBrokersSectionData } = await CustomsBrokersSectionService.getAll();
 
   // Return All Props For Page
   return {
@@ -102,6 +107,7 @@ export const getStaticProps: GetStaticProps = async () => {
       welcomeSectionData: welcomeSectionData.welcomeSections[0],
       whyWeSectionData: whyWeSectionsData.whyWeSections[0],
       anyCarChoiceSectionData: anyCarChoiceSectionsData.anyCarChoices[0],
+      customBrokerSectionData: customsBrokersSectionData.customsBrokers[0],
       revalidate: 5,
     },
   };
