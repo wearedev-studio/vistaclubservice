@@ -39,6 +39,8 @@ import { AnyCarChoiceSection } from "@/types/anyCarChoiceSection";
 import { FeedbackClient } from "@/types/feedbackClient";
 import { PurchasesCustomerSectionsService } from "@/service/purchasesCustomerSectionsService";
 import { PurchasesCustomer } from "@/types/purchasesCustomerSections";
+import { VideoBlogService } from "@/service/videoBlogService";
+import { VideoBlog } from "@/types/videoBlog";
 
 // Interface For Page Props
 interface PageProps {
@@ -49,10 +51,11 @@ interface PageProps {
   anyCarChoiceSectionData: AnyCarChoiceSection;
   feedbackClients: FeedbackClient[];
   purchasesCustomers: PurchasesCustomer;
+  videoBlogData: VideoBlog[];
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData }) => {
   return (
     <>
       <Head>
@@ -73,7 +76,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, w
       <ClientFeedback feedbackClients={feedbackClients} />
       <Button />
       <Reviews />
-      <Blog />
+      <Blog videoBlogData={videoBlogData} />
       <ButtonBlog />
       <Contacts />
       <CarEvaluation />
@@ -93,6 +96,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: anyCarChoiceSectionsData } = await AnyCarChoiceSetionService.getAll();
   const { data: feedbackClients } = await FeedbackClientService.getAll();
   const { data: purchasesCustomers } = await PurchasesCustomerSectionsService.getAll();
+  const { data: videoBlogData } = await VideoBlogService.getAll();
 
   // Return All Props For Page
   return {
@@ -104,6 +108,7 @@ export const getStaticProps: GetStaticProps = async () => {
       anyCarChoiceSectionData: anyCarChoiceSectionsData.anyCarChoices[0],
       feedbackClients: feedbackClients.feedbackClients,
       purchasesCustomers: purchasesCustomers.purchasesCustomers[0],
+      videoBlogData: videoBlogData.videoBlogs,
     },
     revalidate: 5,
   };
