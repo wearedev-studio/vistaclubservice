@@ -1,6 +1,13 @@
+import { Contact } from "@/types/contacts";
+import React from "react";
+
 const currentYear = new Date().getFullYear();
 
-const Contacts = () => {
+interface ComponentProps {
+  contacts: Contact;
+}
+
+const Contacts: React.FC<ComponentProps> = ({ contacts }) => {
   return (
     <div id="contacts" className="page-section">
       <div className="page_section_66 section section_container-width_1200 text-50">
@@ -11,59 +18,15 @@ const Contacts = () => {
 
           <div className="text-50__content text-50__content_layout_1">
             <div className="text-50__column text-50__column1 text-50__column_desktop_align_left text-50__column_mobile_align_left">
-              <div className="text-50__text1 wysiwyg-string">
-                <strong>Адрес:</strong>
-                <br />
-                г.Якутск, окружное шоссе 4км, 14д
-                <a href="https://www.rusprofile.ru/id/10465319" target="_blank">
-                  <br />{" "}
-                </a>
-                <a href="https://www.rusprofile.ru/id/10459267" target="_blank">
-                  ООО «НАЗВАНИЕ»
-                </a>{" "}
-                © {currentYear}
-                <br />
-                ОГРН: xxx
-                <br />
-                ИНН:&nbsp;xxx
-                <br />
-              </div>
+              <div dangerouslySetInnerHTML={{ __html: `${contacts.address.html}` }} className="text-50__text1 wysiwyg-string"></div>
             </div>
             <div className="text-50__divider"></div>
             <div className="text-50__column text-50__column2 text-50__column_desktop_align_left text-50__column_mobile_align_left">
-              <div className="text-50__text2 wysiwyg-string">
-                <strong>Способы связи:</strong>
-                <br />
-                <strong>&nbsp;</strong>
-                <a href="tel:8 914 273 50 05">📞 8 914 273 50 05</a>
-                <br />
-                <strong>&nbsp;</strong>
-                <a href="tel:8 914 273 50 04">📞 8 914 273 50 04</a>
-                <br />
-                <a href="vista.company@gmail.com" target="_blank">
-                  📧 mail.company@gmail.com
-                </a>
-                <br />
-                <a href="https://wa.me/79142735005" target="_blank">
-                  📲 Написать в WhatsApp
-                </a>
-                <br />
-                <a href="https://instagram.com/vista" target="_blank">
-                  📸 Наш Instagram
-                </a>
-                <br />
-                <a href="https://wa.me/79240067784" target="_blank"></a>
-              </div>
+              <div dangerouslySetInnerHTML={{ __html: `${contacts.contacts.html}` }} className="text-50__text2 wysiwyg-string"></div>
               <div className="text-50__divider"></div>
             </div>
             <div className="text-50__column text-50__column3 text-50__column_desktop_align_left text-50__column_mobile_align_left">
-              <div className="text-50__text3 wysiwyg-string">
-                <strong>Время работы:</strong>
-                <br />
-                с 9:00 до 18:00
-                <br />
-                Сб, Вс — выходные.
-              </div>
+              <div dangerouslySetInnerHTML={{ __html: `${contacts.workTime.html}` }} className="text-50__text3 wysiwyg-string"></div>
             </div>
           </div>
         </div>

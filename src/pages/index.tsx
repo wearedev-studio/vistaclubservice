@@ -41,6 +41,8 @@ import { PurchasesCustomerSectionsService } from "@/service/purchasesCustomerSec
 import { PurchasesCustomer } from "@/types/purchasesCustomerSections";
 import { VideoBlogService } from "@/service/videoBlogService";
 import { VideoBlog } from "@/types/videoBlog";
+import { ContactsService } from "@/service/header copy";
+import { Contact } from "@/types/contacts";
 
 // Interface For Page Props
 interface PageProps {
@@ -52,10 +54,11 @@ interface PageProps {
   feedbackClients: FeedbackClient[];
   purchasesCustomers: PurchasesCustomer;
   videoBlogData: VideoBlog[];
+  contacts: Contact;
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData, contacts }) => {
   return (
     <>
       <Head>
@@ -78,7 +81,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, w
       <Reviews />
       <Blog videoBlogData={videoBlogData} />
       <ButtonBlog />
-      <Contacts />
+      <Contacts contacts={contacts} />
       <CarEvaluation />
       <BlogItems variant="home" articles={articles} title="Блог" />
       <Footer />
@@ -97,6 +100,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: feedbackClients } = await FeedbackClientService.getAll();
   const { data: purchasesCustomers } = await PurchasesCustomerSectionsService.getAll();
   const { data: videoBlogData } = await VideoBlogService.getAll();
+  const { data: contacts } = await ContactsService.getAll();
 
   // Return All Props For Page
   return {
@@ -109,6 +113,7 @@ export const getStaticProps: GetStaticProps = async () => {
       feedbackClients: feedbackClients.feedbackClients,
       purchasesCustomers: purchasesCustomers.purchasesCustomers[0],
       videoBlogData: videoBlogData.videoBlogs,
+      contacts: contacts.contacts[0],
     },
     revalidate: 5,
   };
