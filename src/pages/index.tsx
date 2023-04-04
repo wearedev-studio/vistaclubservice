@@ -37,6 +37,8 @@ import { WelcomeSection } from "@/types/welcomeSections";
 import { WhyWeSection } from "@/types/whyWeSection";
 import { AnyCarChoiceSection } from "@/types/anyCarChoiceSection";
 import { FeedbackClient } from "@/types/feedbackClient";
+import { PurchasesCustomerSectionsService } from "@/service/purchasesCustomerSectionsService";
+import { PurchasesCustomer } from "@/types/purchasesCustomerSections";
 
 // Interface For Page Props
 interface PageProps {
@@ -46,10 +48,11 @@ interface PageProps {
   whyWeSectionData: WhyWeSection;
   anyCarChoiceSectionData: AnyCarChoiceSection;
   feedbackClients: FeedbackClient[];
+  purchasesCustomers: PurchasesCustomer;
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers }) => {
   return (
     <>
       <Head>
@@ -65,8 +68,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, w
       <Picture />
       {/* TODO: koper0nat */}
       <CustomsBroker />
-      {/* koper0nat */}
-      <Purchase />
+      <Purchase purchasesCustomers={purchasesCustomers} />
       <Workflow />
       <ClientFeedback feedbackClients={feedbackClients} />
       <Button />
@@ -90,6 +92,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: whyWeSectionsData } = await WhyWeSectionService.getAll();
   const { data: anyCarChoiceSectionsData } = await AnyCarChoiceSetionService.getAll();
   const { data: feedbackClients } = await FeedbackClientService.getAll();
+  const { data: purchasesCustomers } = await PurchasesCustomerSectionsService.getAll();
 
   // Return All Props For Page
   return {
@@ -100,6 +103,7 @@ export const getStaticProps: GetStaticProps = async () => {
       whyWeSectionData: whyWeSectionsData.whyWeSections[0],
       anyCarChoiceSectionData: anyCarChoiceSectionsData.anyCarChoices[0],
       feedbackClients: feedbackClients.feedbackClients,
+      purchasesCustomers: purchasesCustomers.purchasesCustomers[0],
     },
     revalidate: 5,
   };

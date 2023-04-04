@@ -18,7 +18,6 @@ const ClientFeedback: React.FC<ComponentProps> = ({ feedbackClients }) => {
           <div className="flexible-list flexible-list_columns_3 flexible-list_mobile-columns_1 media-47-list media-47__list">
             {feedbackClients.map(({ id, carName, city, userName, image, videoUrl }) => {
               let media = videoUrl ? videoUrl : image ? image.url : imagePlaceholder.src;
-              console.log(media);
               return (
                 <div key={id} className="media-47-item media-47-list__item flexible-list__item">
                   <div className="feedback-clients__media-wrapper media-47-item__video">

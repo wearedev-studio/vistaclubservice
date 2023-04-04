@@ -1,40 +1,22 @@
 import { modalCheckPriceUpdate } from "@/pullstate";
 
 interface IProps {
-  imgPath: string;
-  name: string;
-  price: string;
-  year: string;
-  driveUnit: string;
-  volume: string;
-  power: string;
-  mileage: string;
+  imgUrl: string;
+  title: string;
+  content: string;
 }
 
-const CarInfo = ({ imgPath, name, driveUnit, power, price, year, volume, mileage }: IProps) => {
+const CarInfo = ({ imgUrl, title, content }: IProps) => {
   return (
     <div className="cards-06-item cards-06-list__item flexible-list__item">
       <div className="cards-06-item__inner">
-        <a className="cards-06-item__img-container" href="#a1">
-          <img lazy-image="true" src={imgPath} alt="" className="cards-06-item__img" width="610" />
-        </a>
+        <div className="purchases-customer__img-wrapper cards-06-item__img-container">
+          <img loading="lazy" src={imgUrl} alt={`Изображение для ${title}`} className="purchases-customer__img cards-06-item__img" width="610" />
+        </div>
         <div className="cards-06-item__title cards-06-item__title_with-align wysiwyg-string">
-          <div>{name}</div>
+          <div>{title}</div>
         </div>
-        <div className="cards-06-item__text wysiwyg-string">
-          <strong>Цена в РФ:</strong> от {price} руб.
-          <br />
-          год: {year}
-          <br />
-          привод: {driveUnit}
-          <br />
-          объем ДВС: {volume} cc
-          <br />
-          мощность: {power} л.с.
-          <br />
-          пробег: {mileage} км.
-          <br />
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: `${content}` }} className="cards-06-item__text wysiwyg-string"></div>
         <div className="cards-06-item__button-container cards-06-item__button-container_with-align">
           <button onClick={() => modalCheckPriceUpdate(true)} className="cards-06-item__button button">
             <div className="button__inner">
