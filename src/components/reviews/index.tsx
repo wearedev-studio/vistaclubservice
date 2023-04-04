@@ -25,15 +25,15 @@ const Reviews = () => {
           <div className="text-36__inner section__content">
             <div className="text-36__title wysiwyg-string">
               <div>
-                <a href="https://www.vl.ru/get-avto" target="_blank">
+                <a href="/" target="_blank">
                   VL.RU
                 </a>
                 &nbsp; /&nbsp;&nbsp;
-                <a href="https://2gis.ru/nahodka/firm/70000001024036810/tab/reviews" target="_blank">
+                <a href="/" target="_blank">
                   2GIS
                 </a>
                 &nbsp; /&nbsp;&nbsp;
-                <a href="https://yandex.ru/search/?text=get+auto+%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BA%D0%B0&lr=75" target="_blank">
+                <a href="/" target="_blank">
                   YANDEX
                 </a>
                 &nbsp;
