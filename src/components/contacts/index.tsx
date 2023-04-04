@@ -23,9 +23,9 @@ const Contacts = () => {
                 </a>{" "}
                 © {currentYear}
                 <br />
-                ОГРН: 1162508051860
+                ОГРН: xxx
                 <br />
-                ИНН:&nbsp;2508126367
+                ИНН:&nbsp;xxx
                 <br />
               </div>
             </div>
@@ -40,15 +40,15 @@ const Contacts = () => {
                 <strong>&nbsp;</strong>
                 <a href="tel:8 914 273 50 04">📞 8 914 273 50 04</a>
                 <br />
-                <a href="mailto:getauto.company@gmail.com" target="_blank">
-                  📧 getauto.company@gmail.com
+                <a href="vista.company@gmail.com" target="_blank">
+                  📧 mail.company@gmail.com
                 </a>
                 <br />
-                <a href="https://wa.me/79143333003" target="_blank">
+                <a href="https://wa.me/79142735005" target="_blank">
                   📲 Написать в WhatsApp
                 </a>
                 <br />
-                <a href="https://instagram.com/get_auto_dv" target="_blank">
+                <a href="https://instagram.com/vista" target="_blank">
                   📸 Наш Instagram
                 </a>
                 <br />
