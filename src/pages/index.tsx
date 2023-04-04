@@ -4,13 +4,14 @@ import Head from "next/head";
 
 // Import Services
 import { ArticleService } from "@/service/articles";
-import { BlogItems } from "@/components/blog/blog-articles";
 import { HeaderService } from "@/service/header";
 import { WelcomeSectionService } from "@/service/welcomeSection";
-import { WhyWeSectionService } from "@/service/welcomeSection copy";
-import { AnyCarChoiceSetionService } from "@/service/anyCarChoiceSection"
+import { WhyWeSectionService } from "@/service/whyWeSectionService";
+import { AnyCarChoiceSetionService } from "@/service/anyCarChoiceSection";
+import { FeedbackClientService } from "@/service/feedbackClientService";
 
 // Import Components
+import { BlogItems } from "@/components/blog/blog-articles";
 import { Header } from "@/components/header";
 import { Welcome } from "@/components/welcome";
 import { Cars } from "@/components/cars";
@@ -35,6 +36,7 @@ import { Header as HeaderProps } from "@/types/header";
 import { WelcomeSection } from "@/types/welcomeSections";
 import { WhyWeSection } from "@/types/whyWeSection";
 import { AnyCarChoiceSection } from "@/types/anyCarChoiceSection";
+import { FeedbackClient } from "@/types/feedbackClient";
 
 // Interface For Page Props
 interface PageProps {
@@ -43,17 +45,11 @@ interface PageProps {
   welcomeSectionData: WelcomeSection;
   whyWeSectionData: WhyWeSection;
   anyCarChoiceSectionData: AnyCarChoiceSection;
+  feedbackClients: FeedbackClient[];
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({
-  articles,
-  headerData,
-  welcomeSectionData,
-  whyWeSectionData,
-  anyCarChoiceSectionData,
-}) => {
-
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients }) => {
   return (
     <>
       <Head>
@@ -72,7 +68,7 @@ const Page: NextPage<PageProps> = ({
       {/* koper0nat */}
       <Purchase />
       <Workflow />
-      <ClientFeedback />
+      <ClientFeedback feedbackClients={feedbackClients} />
       <Button />
       <Reviews />
       <Blog />
@@ -93,6 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: welcomeSectionData } = await WelcomeSectionService.getAll();
   const { data: whyWeSectionsData } = await WhyWeSectionService.getAll();
   const { data: anyCarChoiceSectionsData } = await AnyCarChoiceSetionService.getAll();
+  const { data: feedbackClients } = await FeedbackClientService.getAll();
 
   // Return All Props For Page
   return {
@@ -102,8 +99,9 @@ export const getStaticProps: GetStaticProps = async () => {
       welcomeSectionData: welcomeSectionData.welcomeSections[0],
       whyWeSectionData: whyWeSectionsData.whyWeSections[0],
       anyCarChoiceSectionData: anyCarChoiceSectionsData.anyCarChoices[0],
-      revalidate: 5,
+      feedbackClients: feedbackClients.feedbackClients,
     },
+    revalidate: 5,
   };
 };
 

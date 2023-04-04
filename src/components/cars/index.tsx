@@ -52,7 +52,6 @@ const Cars = ({ anyCarChoiceSectionData }: ComponentProps) => {
                 }}
               >
                 {anyCarChoiceSectionData.cars.map((item) => {
-                  console.log(item);
                   return (
                     <SwiperSlide key={item.title}>
                       <div style={{ padding: 0 }} className="cards-05-item cards-05-list__item flexible-list__item">
