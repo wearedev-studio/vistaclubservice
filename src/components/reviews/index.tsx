@@ -54,15 +54,15 @@ const Reviews = () => {
               <div>Еще больше отзывов о нас</div>
             </div>
             <div className="text-68__subtitle wysiwyg-string">
-              <a href="https://www.vl.ru/get-avto" target="_blank">
+              <a href="/" target="_blank">
                 VL.RU
-              </a>{" "}
-              /{" "}
-              <a href="https://2gis.ru/nahodka/firm/70000001024036810/tab/reviews" target="_blank">
-                2GIS
-              </a>{" "}
+              </a>
               /
-              <a href="https://yandex.ru/search/?text=get+auto+%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%BA%D0%B0&lr=75" target="_blank">
+              <a href="" target="_blank">
+                2GIS
+              </a>
+              /
+              <a href="" target="_blank">
                 YANDEX
               </a>
             </div>
