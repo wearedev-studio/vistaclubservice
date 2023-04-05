@@ -22,7 +22,6 @@ const Blog: React.FC<ComponentProps> = ({ videoBlogData }) => {
 
         <div className="flexible-list flexible-list_columns_3 flexible-list_mobile-columns_1 media-47-list media-47__list">
           {videoBlogData.map((item) => {
-            console.log(getYoutubeVideoId(item.videoUrl));
             return (
               <div key={item.id} className="media-47-item media-47-list__item flexible-list__item">
                 <div className="media-47-item__video-container">

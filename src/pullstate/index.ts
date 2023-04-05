@@ -2,36 +2,22 @@ import { registerInDevtools, Store } from "pullstate";
 
 export const AppStore = new Store({
   modalCheckPrice: false,
-  modalCheckPricePoshlina: false,
+  modalCheckPriceAuto: false,
+  modalCheckPriceAutoTitle: "Получите оценку стоимости автомобиля под полную пошлину из Японии!",
   modalQuestionManager: false,
   modalOrder: false,
   modalCallback: false,
-  modalCheckPriceConstructor: false,
-  modalCheckPriceGruzovik: false,
-  modalCheckPriceSpectehnic: false,
 });
 
-export const modalCheckPricePoshlinaUpdate = (condition: boolean) => {
+export const modalCheckPriceAutoTitleUpdate = (text: string) => {
   AppStore.update((store) => {
-    store.modalCheckPricePoshlina = condition;
+    store.modalCheckPriceAutoTitle = text;
   });
 };
 
-export const modalCheckPriceConstructorUpdate = (condition: boolean) => {
+export const modalCheckPriceAutoUpdate = (condition: boolean) => {
   AppStore.update((store) => {
-    store.modalCheckPriceConstructor = condition;
-  });
-};
-
-export const modalCheckPriceGruzovikUpdate = (condition: boolean) => {
-  AppStore.update((store) => {
-    store.modalCheckPriceGruzovik = condition;
-  });
-};
-
-export const modalCheckPriceSpectehnicUpdate = (condition: boolean) => {
-  AppStore.update((store) => {
-    store.modalCheckPriceSpectehnic = condition;
+    store.modalCheckPriceAuto = condition;
   });
 };
 

@@ -41,7 +41,7 @@ import { PurchasesCustomerSectionsService } from "@/service/purchasesCustomerSec
 import { PurchasesCustomer } from "@/types/purchasesCustomerSections";
 import { VideoBlogService } from "@/service/videoBlogService";
 import { VideoBlog } from "@/types/videoBlog";
-import { ContactsService } from "@/service/header copy";
+import { ContactsService } from "@/service/contactsService";
 import { Contact } from "@/types/contacts";
 
 // Interface For Page Props

@@ -1,28 +1,27 @@
+import { AppStore } from "@/pullstate";
 import { MailService } from "@/service/mailService";
-import { CheckPrice as CheckPriceProps } from "@/types/submit";
+import { CheckPriceAuto as CheckPriceAutoProps } from "@/types/submit";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
-interface ComponentProps {
-  title: string;
-}
-
-const CheckPriceJapan = ({ title }: ComponentProps) => {
+const CheckPriceAuto = () => {
+  const { modalCheckPriceAutoTitle } = AppStore.useState((store) => store);
   const [loading, setLoading] = useState(false);
+
   const {
     handleSubmit,
     reset,
     register,
     formState: { errors, isValid },
-  } = useForm<CheckPriceProps>({
+  } = useForm<CheckPriceAutoProps>({
     mode: "onChange",
   });
 
-  const onSubmit = async ({ car, city, phone, year }: CheckPriceProps) => {
+  const onSubmit = async ({ car, city, phone, year }: CheckPriceAutoProps) => {
     try {
       setLoading(true);
-      const data = await MailService.postCheckPriceJapan({ title, car, year, city, phone });
+      const data = await MailService.postCheckPrice({ title: modalCheckPriceAutoTitle, car, year, city, phone });
       console.log(data);
       toast.success("Успешно отправлено!");
     } catch (error) {
@@ -46,4 +45,4 @@ const CheckPriceJapan = ({ title }: ComponentProps) => {
   );
 };
 
-export { CheckPriceJapan };
+export { CheckPriceAuto };

@@ -1,5 +1,5 @@
 // Import Engine
-import { modalCheckPricePoshlinaUpdate } from "@/pullstate";
+import { modalCheckPriceAutoUpdate, modalCheckPriceAutoTitleUpdate } from "@/pullstate";
 // Import Additional Modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -12,10 +12,31 @@ interface ComponentProps {
   anyCarChoiceSectionData: AnyCarChoiceSection;
 }
 
+enum CarType {
+  AUTO = "auto",
+  CONSTRUCTOR = "constructor",
+  GRUZOVIK = "gruzovik",
+  SPEZ = "spez",
+}
+
 // Create Function Component For Cars
 const Cars = ({ anyCarChoiceSectionData }: ComponentProps) => {
-  const handler = () => modalCheckPricePoshlinaUpdate(true);
-  
+  const handler = (type: string) => {
+    modalCheckPriceAutoUpdate(true);
+    if (type === CarType.AUTO) {
+      modalCheckPriceAutoTitleUpdate("Получите оценку стоимости автомобиля под полную пошлину из Японии!");
+    }
+    if (type === CarType.CONSTRUCTOR) {
+      modalCheckPriceAutoTitleUpdate("Получите оценку стоимости распила или конструктора из Японии!");
+    }
+    if (type === CarType.GRUZOVIK) {
+      modalCheckPriceAutoTitleUpdate("Получите оценку стоимости грузовика из Японии!");
+    }
+    if (type === CarType.SPEZ) {
+      modalCheckPriceAutoTitleUpdate("Получите оценку стоимости спецтехники из Японии!");
+    }
+  };
+
   return (
     <div className="auto-cards cards-05 page_section_15 section section_container-width_1200">
       <div className="cards-05__inner section__content">
@@ -52,9 +73,14 @@ const Cars = ({ anyCarChoiceSectionData }: ComponentProps) => {
                 }}
               >
                 {anyCarChoiceSectionData.cars.map((item) => {
+                  let type = CarType.AUTO;
+                  if (item.title.toLowerCase().includes("авто под полную")) type = CarType.AUTO;
+                  if (item.title.toLowerCase().includes("конструкторы")) type = CarType.CONSTRUCTOR;
+                  if (item.title.toLowerCase().includes("грузовик")) type = CarType.GRUZOVIK;
+                  if (item.title.toLowerCase().includes("спецтехника")) type = CarType.SPEZ;
                   return (
                     <SwiperSlide key={item.title}>
-                      <div style={{ padding: 0 }} className="cards-05-item cards-05-list__item flexible-list__item">
+                      <div onClick={() => handler(type)} style={{ padding: 0 }} className="cards-05-item cards-05-list__item flexible-list__item">
                         <div
                           className="cards-05-item__inner"
                           style={{
