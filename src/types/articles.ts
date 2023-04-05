@@ -21,6 +21,7 @@ export interface Article {
   id: string;
   slug: string;
   title: string;
+  excerpt: string;
   category: Category;
   content: {
     html: string

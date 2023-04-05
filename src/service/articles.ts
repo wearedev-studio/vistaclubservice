@@ -11,6 +11,7 @@ class ArticleService {
             id
             slug
             title
+            excerpt
             category {
               id
               name
@@ -38,6 +39,7 @@ class ArticleService {
             id
             slug
             title
+            excerpt
             category {
               id
               name
