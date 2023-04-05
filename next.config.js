@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    GRAPH_API: "https://api-ap-northeast-1.hygraph.com/v2/clfneim5g09a401t848w36ena/master",
+    GRAPH_API: "https://api-ap-northeast-1.hygraph.com/v2/clg3k6teu1bxx01t0auqrbzdg/master",
     DOMAIN_NAME: "vistaclubservice.ru",
     SITE_NAME: "sitename",
     SMTP_NAME: "avtoserg79@gmail.com",

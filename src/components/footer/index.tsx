@@ -18,29 +18,27 @@ const Footer = () => {
             <br />
             <Link href="/#shema">Схема работы</Link>
             <br />
-            <Link href="/" target="_blank">
+            <Link href="http://auc.vistaclubservice.ru" target="_blank">
               Online-аукционы
             </Link>
             <br />
-            <Link href="#calculator">Калькулятор стоимости авто</Link>
+            <Link href="http://auc.vistaclubservice.ru">Каталог автомобилей</Link>
             <br />
-            <Link href="#cars">Каталог автомобилей</Link>
-            <br />
-            <Link href="/" target="_blank">
+            <Link href="http://auc.vistaclubservice.ru/st?classic" target="_blank">
               Статистика продаж Online
             </Link>
-            <Link href="#otzivy">
+            <Link href="/#reviews">
               <br />
             </Link>
-            <Link href="#review">Отзывы</Link>
+            <Link href="/#reviews">Отзывы</Link>
             <br />
             <Link href="/" target="_blank">
               Instagram
             </Link>
-            <Link href="#contacts">
+            <Link href="/#contacts">
               <br />
             </Link>
-            <Link href="#contacts">Контакты</Link>
+            <Link href="/#contacts">Контакты</Link>
             <br />
             <u>
               <button style={{backgroundColor: 'transparent', outline: 0, border: 0}} onClick={()=>{modalCallbackUpdate(true)}}>ЗАКАЗАТЬ ЗВОНОК</button>

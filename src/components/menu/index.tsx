@@ -26,10 +26,10 @@ const Menu = () => {
             </Link>
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <Link className="menu-01-item__link" href="/" target="_blank">
+            <Link className="menu-01-item__link" href="http://auc.vistaclubservice.ru" target="_blank">
               Аукционы Online
             </Link>
-            <ul className="menu-01-item__sub menu-01-item-sub">
+            {/* <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
                 <Link className="menu-01-item-sub__link" href="/" target="_blank">
                   Аукционы в режиме реального времени
@@ -50,7 +50,7 @@ const Menu = () => {
                   Статистика продаж Online
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li className="menu-01-list__item menu-01-item">
             <Link className="menu-01-item__link" href="/" target="_blank">
@@ -58,7 +58,7 @@ const Menu = () => {
             </Link>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="#contacts">
+                <Link className="menu-01-item-sub__link" href="/#contacts">
                   Instagram
                 </Link>
               </li>
@@ -132,30 +132,18 @@ const Menu = () => {
               </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <Link className="page-section-mobile-nav__link" href="/#otzivy" style={{ fontSize: 15 }}>
+              <Link className="page-section-mobile-nav__link" href="/#reviews" style={{ fontSize: 15 }}>
                 Отзывы
               </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <Link
-                className="page-section-mobile-nav__link page-section-mobile-nav__link_has-sub"
-                href="/"
-                ng-class="{'page-section-mobile-nav__link_active' : mobileNav.activeSubIndex === 3}"
-                ng-click="mobileNav.toggleSub(3)"
-                style={{ fontSize: 15 }}
-              >
-                Аукционы Online
+              <Link className="page-section-mobile-nav__link" href="http://auc.vistaclubservice.ru" style={{ fontSize: 15 }}>
+              Аукционы Online
               </Link>
             </li>
             <li className="page-section-mobile-nav__item">
-              <Link
-                className="page-section-mobile-nav__link page-section-mobile-nav__link_has-sub"
-                href="/"
-                ng-class="{'page-section-mobile-nav__link_active' : mobileNav.activeSubIndex === 4}"
-                ng-click="mobileNav.toggleSub(4)"
-                style={{ fontSize: 15 }}
-              >
-                Мы в соц. сетях
+              <Link className="page-section-mobile-nav__link" href="http://auc.vistaclubservice.ru" style={{ fontSize: 15 }}>
+              Мы в соц. сетях
               </Link>
             </li>
             <li className="page-section-mobile-nav__item">
@@ -169,27 +157,22 @@ const Menu = () => {
           <div className="page-section-mobile-nav__sub" ng-cloak="" ng-if="mobileNav.activeSubIndex === 3">
             <ul className="page-section-mobile-nav__sub-inner">
               <li className="page-section-mobile-nav__sub-main-item">
-                <Link className="page-section-mobile-nav__sub-main-link" href="/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-main-link" href="http://auc.vistaclubservice.ru" target="_blank" style={{ fontSize: 15 }}>
                   Аукционы Online
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="http://auc.vistaclubservice.ru" target="_blank" style={{ fontSize: 15 }}>
                   Аукционы в режиме реального времени
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
-                  Калькулятор стоимости авто
-                </Link>
-              </li>
-              <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="http://auc.vistaclubservice.ru" target="_blank" style={{ fontSize: 15 }}>
                   Каталог автомобилей
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/st?classic" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="http://auc.vistaclubservice.ru/st?classic" target="_blank" style={{ fontSize: 15 }}>
                   Статистика продаж Online
                 </Link>
               </li>
