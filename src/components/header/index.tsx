@@ -22,7 +22,7 @@ const Header = ({ headerData }: ComponentProps) => {
             <div className="page-header-02__brand">
               <Link className="page-header-02__brand-logo" href="/">
                 {/* Такие изображения (пути до изображений) нужно импортить желательно через import. Пример - footer. Чтобы пути не ломались в внутренних страницах */}
-                <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} />
+                <Image src="/images/008/786/001/photo_2023-03-28_16-00-45.jpg" alt="Grad" width={125} height={125} quality={100} />
               </Link>
             </div>
             <div dangerouslySetInnerHTML={{__html: `${headerData.description.html}`}} className="page-header-02__subheader wysiwyg-string"></div>
