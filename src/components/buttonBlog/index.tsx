@@ -4,7 +4,7 @@ const ButtonBlog = () => {
       <div className="text-36__inner section__content">
         <div className="text-36__title wysiwyg-string">
           <div>
-            <a href="" target="_blank">
+            <a href="https://youtube.com/@vistaclubservice2972" target="_blank">
               Перейти в наш YouTube-канал
             </a>
           </div>

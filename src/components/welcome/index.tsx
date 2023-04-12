@@ -11,7 +11,8 @@ const Welcome = ({ welcomeSectionData }: ComponentProps) => (
       <div
         className="section__background-image"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(./images/008/photo_2023-03-28_16-01-53.jpg)",
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(./images/008/photo_2023-04-12_23-02-44.jpg)",
+          backgroundRepeat: "no-repeat",
         }}
       />
     </div>

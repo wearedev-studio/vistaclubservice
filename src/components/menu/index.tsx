@@ -186,12 +186,12 @@ const Menu = () => {
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/" target="_blank" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="https://instagram.com/vistaclubservice" target="_blank" style={{ fontSize: 15 }}>
                   Instagram
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">
-                <Link className="page-section-mobile-nav__sub-link" href="/" style={{ fontSize: 15 }}>
+                <Link className="page-section-mobile-nav__sub-link" href="https://youtube.com/@vistaclubservice2972" style={{ fontSize: 15 }}>
                   YouTube
                 </Link>
               </li>

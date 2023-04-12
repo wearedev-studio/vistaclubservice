@@ -32,7 +32,7 @@ const Footer = () => {
             </Link>
             <Link href="/#reviews">Отзывы</Link>
             <br />
-            <Link href="/" target="_blank">
+            <Link href="https://instagram.com/vistaclubservice" target="_blank">
               Instagram
             </Link>
             <Link href="/#contacts">

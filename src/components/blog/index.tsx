@@ -14,7 +14,7 @@ const Blog: React.FC<ComponentProps> = ({ videoBlogData }) => {
         <div className="section__header section__header_align_center wysiwyg-string">
           <h3>
             Смотрите наш видео-блог на&nbsp;
-            <a href="/" target="_blank">
+            <a href="https://youtube.com/@vistaclubservice2972" target="_blank">
               YouTube
             </a>
           </h3>

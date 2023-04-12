@@ -29,11 +29,11 @@ const Reviews = () => {
                   VL.RU
                 </a>
                 &nbsp; /&nbsp;&nbsp;
-                <a href="/" target="_blank">
+                <a href="https://2gis.ru/yakutsk/geo/70000001030031697" target="_blank">
                   2GIS
                 </a>
                 &nbsp; /&nbsp;&nbsp;
-                <a href="/" target="_blank">
+                <a href="https://yandex.ru/maps/org/vista_club_service/109902496692" target="_blank">
                   YANDEX
                 </a>
                 &nbsp;
@@ -58,11 +58,11 @@ const Reviews = () => {
                 VL.RU
               </a>
               /
-              <a href="" target="_blank">
+              <a href="https://2gis.ru/yakutsk/geo/70000001030031697" target="_blank">
                 2GIS
               </a>
               /
-              <a href="" target="_blank">
+              <a href="https://yandex.ru/maps/org/vista_club_service/109902496692" target="_blank">
                 YANDEX
               </a>
             </div>
