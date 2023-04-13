@@ -53,17 +53,17 @@ const Menu = () => {
             </ul> */}
           </li>
           <li className="menu-01-list__item menu-01-item">
-            <Link className="menu-01-item__link" href="/" target="_blank">
+            <Link className="menu-01-item__link" href="/#contacts">
               Мы в соц. сетях
             </Link>
             <ul className="menu-01-item__sub menu-01-item-sub">
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="/#contacts">
+                <Link className="menu-01-item-sub__link" href="https://instagram.com/vistaclubservice" target="_blank">
                   Instagram
                 </Link>
               </li>
               <li className="menu-01-item-sub__item">
-                <Link className="menu-01-item-sub__link" href="#blog">
+                <Link target="_blank" className="menu-01-item-sub__link" href="https://youtube.com/@vistaclubservice2972">
                   YouTube
                 </Link>
               </li>
