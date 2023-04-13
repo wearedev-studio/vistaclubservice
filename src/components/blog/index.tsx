@@ -26,7 +26,7 @@ const Blog: React.FC<ComponentProps> = ({ videoBlogData }) => {
               <div key={item.id} className="media-47-item media-47-list__item flexible-list__item">
                 <div className="media-47-item__video-container">
                   <div className="media-47-item__video" parse-video-url="https://www.youtube.com/watch?v=aEhwsZTgSAw">
-                    <iframe className="video-blog__video" loading="lazy" src={`http://www.youtube.com/embed/${getYoutubeVideoId(item.videoUrl)}`} frameBorder={0} allowFullScreen></iframe>
+                    <iframe className="video-blog__video" loading="lazy" src={`https://www.youtube.com/embed/${getYoutubeVideoId(item.videoUrl)}`} frameBorder={0} allowFullScreen></iframe>
                   </div>
                 </div>
                 <div className="media-47-item__text wysiwyg-content">

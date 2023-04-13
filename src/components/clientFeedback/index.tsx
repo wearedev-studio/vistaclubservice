@@ -22,7 +22,7 @@ const ClientFeedback: React.FC<ComponentProps> = ({ feedbackClients }) => {
                 <div key={id} className="media-47-item media-47-list__item flexible-list__item">
                   <div className="feedback-clients__media-wrapper media-47-item__video">
                     {videoUrl ? (
-                      <iframe className="feedback-clients__media-video" loading="lazy" src={`http://www.youtube.com/embed/${getYoutubeVideoId(media)}`} frameBorder={0} allowFullScreen></iframe>
+                      <iframe className="feedback-clients__media-video" loading="lazy" src={`https://www.youtube.com/embed/${getYoutubeVideoId(media)}`} frameBorder={0} allowFullScreen></iframe>
                     ) : (
                       <img className="feedback-clients__media-img" src={media} />
                     )}
