@@ -24553,8 +24553,11 @@ body,
     background-color: #ffffff;
     transition: all 0.3s ease;
     transform: scale(0.95);
+    max-height: calc(100% - 80px);
+    overflow-y: auto;
     @media (max-width: 768px) {
       padding: 20px;
+      max-height: calc(100% - 40px);
     }
   }
   &__close-btn {
@@ -24590,7 +24593,12 @@ body,
     }
   }
   &__form {
-
+    overflow-y: auto;
+    &_content {
+      p {
+        margin-bottom: 10px;
+      }
+    }
   }
   &__input{
     display: block;
@@ -24749,4 +24757,19 @@ body,
 
 .text-yellow {
   color: #e4ff00;
+}
+
+.site-btn {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  &_link {
+    color: #0099ff;
+    border-bottom: 1.5px solid #0099ff;
+    transition: all .3s ease;
+    &:hover {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
 }

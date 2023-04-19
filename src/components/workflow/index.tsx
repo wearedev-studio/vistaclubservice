@@ -1,4 +1,4 @@
-import { modalOrderUpdate } from "@/pullstate";
+import { modalContractUpdate, modalOrderUpdate } from "@/pullstate";
 
 const Workflow = () => {
   return (
@@ -38,9 +38,9 @@ const Workflow = () => {
               <a href="/files/005/143/783/5143783/original/dogovor-pokupki-avto-s-aukcionov-yaponii-icb-auto.pdf" target="_blank">
                 <strong />
               </a>
-              <a href="/" target="_blank">
+              <button className="site-btn site-btn_link" onClick={() => modalContractUpdate(true)}>
                 <strong>Смотреть договор</strong>
-              </a>
+              </button>
             </div>
           </li>
           <li className="process-04-item process-04-list__item">

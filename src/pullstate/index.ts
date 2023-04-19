@@ -7,6 +7,7 @@ export const AppStore = new Store({
   modalQuestionManager: false,
   modalOrder: false,
   modalCallback: false,
+  modalContract: false,
 });
 
 export const modalCheckPriceAutoTitleUpdate = (text: string) => {
@@ -42,6 +43,12 @@ export const modalOrderUpdate = (condition: boolean) => {
 export const modalCallbackUpdate = (condition: boolean) => {
   AppStore.update((store) => {
     store.modalCallback = condition;
+  });
+};
+
+export const modalContractUpdate = (condition: boolean) => {
+  AppStore.update((store) => {
+    store.modalContract = condition;
   });
 };
 
