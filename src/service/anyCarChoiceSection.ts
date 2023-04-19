@@ -19,6 +19,7 @@ class AnyCarChoiceSetionService {
                     title
                     id
                     description
+                    modalTitle
                     image {
                         url
                         width

@@ -18,6 +18,7 @@ export interface Car {
     id: string;
     title: string;
     description: string;
+    modalTitle: string;
     image: Image;
 }
 
