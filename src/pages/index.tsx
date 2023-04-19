@@ -43,6 +43,8 @@ import { VideoBlogService } from "@/service/videoBlogService";
 import { VideoBlog } from "@/types/videoBlog";
 import { ContactsService } from "@/service/contactsService";
 import { Contact } from "@/types/contacts";
+import { BrokerService } from "@/service/brokerService";
+import { CustomBroker } from "@/types/customsBrokersSections";
 
 // Interface For Page Props
 interface PageProps {
@@ -55,10 +57,11 @@ interface PageProps {
   purchasesCustomers: PurchasesCustomer;
   videoBlogData: VideoBlog[];
   contacts: Contact;
+  customBroker: CustomBroker;
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData, contacts }) => {
+const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData, contacts, customBroker }) => {
   return (
     <>
       <Head>
@@ -72,8 +75,7 @@ const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, w
       <Cars anyCarChoiceSectionData={anyCarChoiceSectionData} />
       <Reason whyWeSectionData={whyWeSectionData} />
       <Picture />
-      {/* TODO: koper0nat */}
-      <CustomsBroker />
+      <CustomsBroker customBroker={customBroker} />
       <Purchase purchasesCustomers={purchasesCustomers} />
       <Workflow />
       <ClientFeedback feedbackClients={feedbackClients} />
@@ -101,6 +103,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: purchasesCustomers } = await PurchasesCustomerSectionsService.getAll();
   const { data: videoBlogData } = await VideoBlogService.getAll();
   const { data: contacts } = await ContactsService.getAll();
+  const { data: customBrokers } = await BrokerService.getAll();
 
   // Return All Props For Page
   return {
@@ -114,6 +117,7 @@ export const getStaticProps: GetStaticProps = async () => {
       purchasesCustomers: purchasesCustomers.purchasesCustomers[0],
       videoBlogData: videoBlogData.videoBlogs,
       contacts: contacts.contacts[0],
+      customBroker: customBrokers.customsBrokers[0],
     },
     revalidate: 5,
   };
