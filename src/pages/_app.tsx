@@ -19,6 +19,14 @@ import { QuestionManager } from "@/components/modals/content/question-manager";
 import { Order } from "@/components/modals/content/order";
 import { Callback } from "@/components/modals/content/callback";
 
+import { ContractContentService } from "@/service/ContractContentService";
+import { ContractsContentSections } from "@/types/contractContentSections";
+
+interface PageProps {
+  contractContent: ContractContent;
+}
+
+
 // Config for Fonts
 const montserrat = Montserrat({
   subsets: ["cyrillic", "latin"],
@@ -55,6 +63,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       </div>
     </ApolloProvider>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+const { data: contractContent } = await ContractContentService.getAll();
+
+return {
+  props: {
+    contractContentSectionsData: contractContentSectionsData.conractContentSections[0],
+  },
+  revalidate: 5,
+};
+}; 
 
 export default MyApp;
