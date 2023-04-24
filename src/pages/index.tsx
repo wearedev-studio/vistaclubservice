@@ -47,6 +47,8 @@ import { Contact } from "@/types/contacts";
 import { BrokerService } from "@/service/brokerService";
 import { CustomBroker } from "@/types/customsBrokersSections";
 import { ContractsSections } from "@/types/contractsSections";
+import { modalContractUpdate } from "@/pullstate";
+import { AppStore } from "@/pullstate";
 
 // Interface For Page Props
 interface PageProps {
@@ -77,7 +79,9 @@ const Page: NextPage<PageProps> = ({
   customBroker,
   contract
 }) => {
-  console.log("Договор: ", contract);
+  AppStore.update(store=>{
+    store.modalContractContent = contract.text.html
+  })
   return (
     <>
       <Head>

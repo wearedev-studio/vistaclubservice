@@ -3,10 +3,7 @@ interface ComponentProps {
 }
 
 const ContractContent = ({ content }: ComponentProps) => {
-  console.log(content);
-  
-  return <div className="site-modal__form site-modal__form_content">
-    {content}
+  return <div dangerouslySetInnerHTML={{ __html: `${content}` }} className="site-modal__form site-modal__form_content">
   </div>
 };
 

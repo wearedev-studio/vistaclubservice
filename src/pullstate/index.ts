@@ -8,6 +8,7 @@ export const AppStore = new Store({
   modalOrder: false,
   modalCallback: false,
   modalContract: false,
+  modalContractContent: "",
 });
 
 export const modalCheckPriceAutoTitleUpdate = (text: string) => {
