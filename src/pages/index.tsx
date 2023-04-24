@@ -9,6 +9,7 @@ import { WelcomeSectionService } from "@/service/welcomeSection";
 import { WhyWeSectionService } from "@/service/whyWeSectionService";
 import { AnyCarChoiceSetionService } from "@/service/anyCarChoiceSection";
 import { FeedbackClientService } from "@/service/feedbackClientService";
+import { ContractService } from "@/service/contractsService";
 
 // Import Components
 import { BlogItems } from "@/components/blog/blog-articles";
@@ -45,6 +46,7 @@ import { ContactsService } from "@/service/contactsService";
 import { Contact } from "@/types/contacts";
 import { BrokerService } from "@/service/brokerService";
 import { CustomBroker } from "@/types/customsBrokersSections";
+import { ContractsSections } from "@/types/contractsSections";
 
 // Interface For Page Props
 interface PageProps {
@@ -58,10 +60,24 @@ interface PageProps {
   videoBlogData: VideoBlog[];
   contacts: Contact;
   customBroker: CustomBroker;
+  contract: ContractsSections;
 }
 
 // Create Page
-const Page: NextPage<PageProps> = ({ articles, headerData, welcomeSectionData, whyWeSectionData, anyCarChoiceSectionData, feedbackClients, purchasesCustomers, videoBlogData, contacts, customBroker }) => {
+const Page: NextPage<PageProps> = ({
+  articles,
+  headerData,
+  welcomeSectionData,
+  whyWeSectionData,
+  anyCarChoiceSectionData,
+  feedbackClients,
+  purchasesCustomers,
+  videoBlogData,
+  contacts,
+  customBroker,
+  contract
+}) => {
+  console.log("Договор: ", contract);
   return (
     <>
       <Head>
@@ -104,6 +120,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: videoBlogData } = await VideoBlogService.getAll();
   const { data: contacts } = await ContactsService.getAll();
   const { data: customBrokers } = await BrokerService.getAll();
+  const { data: contract } = await ContractService.getAll();
 
   // Return All Props For Page
   return {
@@ -118,6 +135,7 @@ export const getStaticProps: GetStaticProps = async () => {
       videoBlogData: videoBlogData.videoBlogs,
       contacts: contacts.contacts[0],
       customBroker: customBrokers.customsBrokers[0],
+      contract: contract.contract[0],
     },
     revalidate: 5,
   };
