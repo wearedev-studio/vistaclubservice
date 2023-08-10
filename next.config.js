@@ -6,8 +6,8 @@ const nextConfig = {
     GRAPH_API: "https://api-ap-northeast-1.hygraph.com/v2/clg3k6teu1bxx01t0auqrbzdg/master",
     DOMAIN_NAME: "vistaclubservice.ru",
     SITE_NAME: "sitename",
-    SMTP_NAME: "avtoserg79@gmail.com",
-    SMTP_PASS: "limfxfpjpnqbpkmc"
+    SMTP_NAME: "vistaclubservice@mail.ru",
+    SMTP_PASS: "HTRWTZjGbjGYE3TXq04q"
   },
 };
 
