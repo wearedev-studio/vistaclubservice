@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const mailData = {
         from: process.env.SMTP_NAME,
-        to: process.env.SMTP_NAME,
+        to: [`${process.env.SMTP_NAME}`, `${process.env.EMAIL_RECIPIENT}`],
         subject: `Заявка с сайта ${process.env.DOMAIN_NAME}`,
         html: `
             <h1>${title} ${process.env.DOMAIN_NAME}</h1>
