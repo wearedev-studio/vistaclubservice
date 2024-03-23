@@ -53,6 +53,16 @@ const Menu = () => {
             </ul> */}
           </li>
           <li className="menu-01-list__item menu-01-item">
+            <Link className="menu-01-item__link" href="https://m.dongchedi.com/auto/series/5387" target="_blank">
+              Машины из Китая
+            </Link>
+          </li>
+          <li className="menu-01-list__item menu-01-item">
+            <Link className="menu-01-item__link" href="https://fem.encar.com/cars/detail/32995399?type=detail&listAdvType=normal&advClickPosition=mweb_normal_g4_t629&view_type=normal&tempht_arg=OuF12H91OAb2_3" target="_blank">
+              Машины из Кореи
+            </Link>
+          </li>
+          <li className="menu-01-list__item menu-01-item">
             <Link className="menu-01-item__link" href="/#contacts">
               Мы в соц. сетях
             </Link>
@@ -142,6 +152,16 @@ const Menu = () => {
               </Link>
             </li>
             <li className="page-section-mobile-nav__item">
+              <Link className="page-section-mobile-nav__link" href="https://m.dongchedi.com/auto/series/5387" style={{ fontSize: 15 }}>
+              Машины из Китая
+              </Link>
+            </li>
+            <li className="page-section-mobile-nav__item">
+              <Link className="page-section-mobile-nav__link" href="https://fem.encar.com/cars/detail/32995399?type=detail&listAdvType=normal&advClickPosition=mweb_normal_g4_t629&view_type=normal&tempht_arg=OuF12H91OAb2_3" style={{ fontSize: 15 }}>
+              Машины из Кореи
+              </Link>
+            </li>
+            <li className="page-section-mobile-nav__item">
               <Link className="page-section-mobile-nav__link" href="http://auc.vistaclubservice.ru" style={{ fontSize: 15 }}>
               Мы в соц. сетях
               </Link>
@@ -159,6 +179,16 @@ const Menu = () => {
               <li className="page-section-mobile-nav__sub-main-item">
                 <Link className="page-section-mobile-nav__sub-main-link" href="http://auc.vistaclubservice.ru" target="_blank" style={{ fontSize: 15 }}>
                   Аукционы Online
+                </Link>
+              </li>
+              <li className="page-section-mobile-nav__sub-main-item">
+                <Link className="page-section-mobile-nav__sub-main-link" href="https://m.dongchedi.com/auto/series/5387" target="_blank" style={{ fontSize: 15 }}>
+                  Машины из Китая
+                </Link>
+              </li>
+              <li className="page-section-mobile-nav__sub-main-item">
+                <Link className="page-section-mobile-nav__sub-main-link" href="https://fem.encar.com/cars/detail/32995399?type=detail&listAdvType=normal&advClickPosition=mweb_normal_g4_t629&view_type=normal&tempht_arg=OuF12H91OAb2_3" target="_blank" style={{ fontSize: 15 }}>
+                  Машины из Кореи
                 </Link>
               </li>
               <li className="page-section-mobile-nav__sub-item">

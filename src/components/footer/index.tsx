@@ -22,6 +22,14 @@ const Footer = () => {
               Online-аукционы
             </Link>
             <br />
+            <Link href="https://m.dongchedi.com/auto/series/5387" target="_blank">
+              Машины из Китая
+            </Link>
+            <br />
+            <Link href="https://fem.encar.com/cars/detail/32995399?type=detail&listAdvType=normal&advClickPosition=mweb_normal_g4_t629&view_type=normal&tempht_arg=OuF12H91OAb2_3" target="_blank">
+              Машины из Кореи
+            </Link>
+            <br />
             <Link href="http://auc.vistaclubservice.ru">Каталог автомобилей</Link>
             <br />
             <Link href="http://auc.vistaclubservice.ru/st?classic" target="_blank">
