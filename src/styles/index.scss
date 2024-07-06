@@ -24792,5 +24792,9 @@ body,
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 }
