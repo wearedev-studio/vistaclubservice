@@ -2,7 +2,6 @@ import { getYoutubeVideoId } from "@/helpers/getYoutubeVideoId";
 import { VideoBlog } from "@/types/videoBlog";
 import { log } from "console";
 import React from "react";
-
 interface ComponentProps {
   videoBlogData: VideoBlog[];
 }
@@ -10,6 +9,17 @@ interface ComponentProps {
 const Blog: React.FC<ComponentProps> = ({ videoBlogData }) => {
   return (
     <div className="video-blog media-47 page_section_63 section section_container-width_1200">
+      <div className="partners__block">
+        <h1>Наши партнеры:</h1>
+        <div className="logo-wrapper">
+          <a href="https://autovoz-world.ru/" target="_blank">
+            <img src="/images/autovoz-logo.png"/>
+          </a>
+          <a href="https://jupiter-k.com/" target="_blank">
+            <img src="/images/jupiter-logo.png"/>
+          </a>
+        </div>
+      </div>
       <div className="media-47__inner section__content">
         <div className="section__header section__header_align_center wysiwyg-string">
           <h3>
