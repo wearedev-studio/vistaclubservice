@@ -31,12 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={apolloClient}>
       <div className={`${montserrat.className} root`}>
-      <div className="error-502">
-          <h1>502</h1>
-          <h2>Bad Gateway</h2>
-          <p>Sorry, the server is temporarily unavailable. Please try again later.</p>
-        </div>
-        {/* <Component {...pageProps} />
+        <Component {...pageProps} />
         <RootModal active={modalCheckPrice} onClose={() => modalCheckPriceUpdate(false)} title="Получить оценку стоимости авто из Японии за 15 мин!">
           <CheckPriceJapan title={"Получить оценку стоимости авто из Японии за 15 мин!"} />
         </RootModal>
@@ -62,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             duration: 5000,
             position: "bottom-center",
           }}
-        /> */}
+        />
       </div>
     </ApolloProvider>
   );

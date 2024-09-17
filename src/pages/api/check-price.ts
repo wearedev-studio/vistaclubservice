@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     case "POST":
       const { title, car, city, phone, year }: ReqBody = req.body;
       const transporter = nodemailer.createTransport({
-        host: "smtp.mail.ru",
+        host: "smtp.yandex.ru",
         port: 465,
         secure: true,
         auth: {
@@ -19,6 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           pass: process.env.SMTP_PASS,
         },
       });
+
 
       const mailData = {
         from: process.env.SMTP_NAME,
