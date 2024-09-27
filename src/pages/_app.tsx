@@ -29,44 +29,44 @@ const montserrat = Montserrat({
 function MyApp({ Component, pageProps }: AppProps) {
   const { modalCheckPriceAuto, modalCheckPrice, modalOrder, modalQuestionManager, modalCallback, modalCheckPriceAutoTitle, modalContract, modalContractContent } = AppStore.useState((store) => store);
   return (
-    // <ApolloProvider client={apolloClient}>
-    //   <div className={`${montserrat.className} root`}>
-    //     <Component {...pageProps} />
-    //     <RootModal active={modalCheckPrice} onClose={() => modalCheckPriceUpdate(false)} title="Получить оценку стоимости авто из Японии за 15 мин!">
-    //       <CheckPriceJapan title={"Получить оценку стоимости авто из Японии за 15 мин!"} />
-    //     </RootModal>
-    //     <RootModal active={modalQuestionManager} onClose={() => modalQuestionManagerUpdate(false)} title="Какой у вас вопрос?">
-    //       <QuestionManager title="Какой у вас вопрос?" />
-    //     </RootModal>
-    //     <RootModal active={modalCheckPriceAuto} onClose={() => modalCheckPriceAutoUpdate(false)} title={modalCheckPriceAutoTitle}>
-    //       <CheckPriceAuto />
-    //     </RootModal>
-    //     <RootModal active={modalOrder} onClose={() => modalOrderUpdate(false)} title="Оставить заявку">
-    //       <Order title="Оставить заявку" />
-    //     </RootModal>
-    //     <RootModal active={modalCallback} onClose={() => modalCallbackUpdate(false)} title="Свяжемся с вами в течение 10 минут!">
-    //       <Callback title="Свяжемся с вами в течение 10 минут!" />
-    //     </RootModal>
-    //     <RootModal active={modalContract} onClose={() => modalContractUpdate(false)} title="Договор">
-    //       <ContractContent
-    //         content={modalContractContent}
-    //       />
-    //     </RootModal>
-    //     <Toaster
-    //       toastOptions={{
-    //         duration: 5000,
-    //         position: "bottom-center",
-    //       }}
-    //     />
-    //   </div>
-    // </ApolloProvider>
-    <div className={`${montserrat.className} root`}>
+    <ApolloProvider client={apolloClient}>
+      {/* <div className={`${montserrat.className} root`}>
+        <Component {...pageProps} />
+        <RootModal active={modalCheckPrice} onClose={() => modalCheckPriceUpdate(false)} title="Получить оценку стоимости авто из Японии за 15 мин!">
+          <CheckPriceJapan title={"Получить оценку стоимости авто из Японии за 15 мин!"} />
+        </RootModal>
+        <RootModal active={modalQuestionManager} onClose={() => modalQuestionManagerUpdate(false)} title="Какой у вас вопрос?">
+          <QuestionManager title="Какой у вас вопрос?" />
+        </RootModal>
+        <RootModal active={modalCheckPriceAuto} onClose={() => modalCheckPriceAutoUpdate(false)} title={modalCheckPriceAutoTitle}>
+          <CheckPriceAuto />
+        </RootModal>
+        <RootModal active={modalOrder} onClose={() => modalOrderUpdate(false)} title="Оставить заявку">
+          <Order title="Оставить заявку" />
+        </RootModal>
+        <RootModal active={modalCallback} onClose={() => modalCallbackUpdate(false)} title="Свяжемся с вами в течение 10 минут!">
+          <Callback title="Свяжемся с вами в течение 10 минут!" />
+        </RootModal>
+        <RootModal active={modalContract} onClose={() => modalContractUpdate(false)} title="Договор">
+          <ContractContent
+            content={modalContractContent}
+          />
+        </RootModal>
+        <Toaster
+          toastOptions={{
+            duration: 5000,
+            position: "bottom-center",
+          }}
+        />
+      </div> */}
+      <div className={`${montserrat.className} root`}>
         <div className="error-404">
           <h1>404</h1>
           <h2>Not Found</h2>
           <p>The requested page could not be found.</p>
         </div>
       </div>
+    </ApolloProvider>
   );
 }
 
