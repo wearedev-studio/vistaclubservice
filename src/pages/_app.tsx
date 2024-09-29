@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { modalCheckPriceAuto, modalCheckPrice, modalOrder, modalQuestionManager, modalCallback, modalCheckPriceAutoTitle, modalContract, modalContractContent } = AppStore.useState((store) => store);
   return (
     <ApolloProvider client={apolloClient}>
-      {/* <div className={`${montserrat.className} root`}>
+      <div className={`${montserrat.className} root`}>
         <Component {...pageProps} />
         <RootModal active={modalCheckPrice} onClose={() => modalCheckPriceUpdate(false)} title="Получить оценку стоимости авто из Японии за 15 мин!">
           <CheckPriceJapan title={"Получить оценку стоимости авто из Японии за 15 мин!"} />
@@ -58,13 +58,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             position: "bottom-center",
           }}
         />
-      </div> */}
-      <div className={`${montserrat.className} root`}>
-        <div className="error-404">
-          <h1>404</h1>
-          <h2>Not Found</h2>
-          <p>The requested page could not be found.</p>
-        </div>
       </div>
     </ApolloProvider>
   );
