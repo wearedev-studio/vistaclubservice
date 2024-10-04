@@ -18,11 +18,11 @@ const CarInfo = ({ imgUrl, title, content }: IProps) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: `${content}` }} className="cards-06-item__text wysiwyg-string"></div>
         <div className="cards-06-item__button-container cards-06-item__button-container_with-align">
-          <button onClick={() => modalCheckPriceUpdate(true)} className="cards-06-item__button button">
+          <a href="https://wa.me/79142735005" target="_blank" rel="noopener noreferrer" className="cards-06-item__button button">
             <div className="button__inner">
               <span className="button__text">Бесплатный расчет</span>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>

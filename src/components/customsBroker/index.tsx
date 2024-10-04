@@ -17,11 +17,11 @@ const CustomsBroker = ({ customBroker }: ComponentProps) => {
           <div className="promo-05-content__title wysiwyg-string" dangerouslySetInnerHTML={{ __html: `${customBroker.title.html}` }}></div>
           <div className="promo-05-content__text wysiwyg-string" dangerouslySetInnerHTML={{ __html: `${customBroker.guarantees.html}` }} />
           <div className="promo-05-content__btns-container">
-            <button onClick={() => modalQuestionManagerUpdate(true)} className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
+            <a href="https://wa.me/79142735005" target="_blank" rel="noopener noreferrer" className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
               <div className="button__inner">
                 <span className="button__text">Задать вопрос менеджеру</span>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </div>

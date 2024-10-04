@@ -22,16 +22,16 @@ const Welcome = ({ welcomeSectionData }: ComponentProps) => (
         <div dangerouslySetInnerHTML={{ __html: `${welcomeSectionData.title.html}` }} className="promo-05-content__title wysiwyg-string"></div>
         <div dangerouslySetInnerHTML={{ __html: `${welcomeSectionData.features.html}` }} className="promo-05-content__text wysiwyg-string"></div>
         <div className="promo-05-content__btns-container">
-          <button onClick={() => modalCheckPriceUpdate(true)} className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
+          <a href="https://wa.me/79142735005" target="_blank" rel="noopener noreferrer" className="promo-05-content__btn-1 button button_style_1 button_visual-css button_has-shadow-hover">
             <div className="button__inner">
               <span className="button__text">Узнать стоимость</span>
             </div>
-          </button>
-          <button onClick={() => modalQuestionManagerUpdate(true)} className="promo-05-content__btn-2 button button_style_2 button_visual-css button_has-shadow-hover">
+          </a>
+          <a href="https://wa.me/79142735005" target="_blank" rel="noopener noreferrer" className="promo-05-content__btn-2 button button_style_2 button_visual-css button_has-shadow-hover">
             <div className="button__inner">
               <span className="button__text">Задать вопрос менеджеру</span>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>

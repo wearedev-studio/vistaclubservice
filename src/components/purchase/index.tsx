@@ -29,11 +29,11 @@ const Purchase: React.FC<ComponentProps> = ({ purchasesCustomers }) => {
       <div className="animated-section button-02 page_section_48 section section_container-width_1200">
         <div className="button-02__inner section__content">
           <div className="button-02__content button-02__content_center">
-            <button onClick={() => modalQuestionManagerUpdate(true)} className="button-02__item button-02__item_1 button button_style_1 button_visual-css button_has-shadow-hover">
+            <a href="https://wa.me/79142735005" target="_blank" rel="noopener noreferrer" className="button-02__item button-02__item_1 button button_style_1 button_visual-css button_has-shadow-hover">
               <div className="button__inner">
                 <span className="button__text">Задать вопрос менеджеру</span>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </div>
